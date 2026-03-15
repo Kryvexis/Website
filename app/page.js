@@ -4,19 +4,18 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Clapperboard, Layers3, Sparkles, Workflow } from "lucide-react";
 import BootSequence from "@/components/BootSequence";
-import FakeVideoScenes from "@/components/FakeVideoScenes";
+import ImpossibleChapters from "@/components/ImpossibleChapters";
+import ImpossibleHero from "@/components/ImpossibleHero";
 import MagneticButton from "@/components/MagneticButton";
 import ModeSwitch from "@/components/ModeSwitch";
-import OverdriveGrid from "@/components/OverdriveGrid";
-import ParticleStorm from "@/components/ParticleStorm";
-import SystemHero from "@/components/SystemHero";
-import SystemReactor from "@/components/SystemReactor";
+import ResponseGrid from "@/components/ResponseGrid";
+import WorldFX from "@/components/WorldFX";
 
 const stats = [
-  { icon: Clapperboard, title: "Fake video scene flow", body: "Sticky cinematic cuts and poster compositions make the site feel edited like a trailer." },
-  { icon: Layers3, title: "More projection pressure", body: "The background now carries stronger scanlines, wipes, light passes, and screen noise." },
-  { icon: Sparkles, title: "Still reactive on mobile", body: "Touch keeps the machine expressive instead of stripping the experience down." },
-  { icon: Workflow, title: "Still deploy-ready", body: "Even with the spectacle turned up, the structure stays simple for GitHub and Vercel." }
+  { icon: Clapperboard, title: "One directed experience", body: "The site behaves like a cinematic machine-world instead of a landing page with effects." },
+  { icon: Layers3, title: "Unified motion grammar", body: "Backgrounds, wipes, panels, glow fields, and interactions now all speak the same language." },
+  { icon: Sparkles, title: "Interactive on every device", body: "Touch still feels expressive, while desktop keeps full motion pressure and tilt response." },
+  { icon: Workflow, title: "Still deployable", body: "Despite the spectacle, the structure remains simple for GitHub and Vercel deployment." }
 ];
 
 export default function Page() {
@@ -26,8 +25,7 @@ export default function Page() {
   return (
     <main className={pageClass}>
       <BootSequence />
-      <SystemReactor />
-      <ParticleStorm />
+      <WorldFX />
       <div className="noise-layer" />
       <div className="grid-layer" />
       <div className="horizon-band band-a" />
@@ -40,25 +38,25 @@ export default function Page() {
       <header className="portal-nav">
         <a href="#top" className="brand-mark">
           <span className="brand-dot" />
-          Kryvexis System Portal V9
+          Kryvexis Impossible V10
         </a>
         <nav>
-          <a href="#cinema">Cinema</a>
+          <a href="#chapters">Chapters</a>
           <a href="#config">Config</a>
           <a href="#launch">Launch</a>
         </nav>
       </header>
 
-      <SystemHero />
-      <FakeVideoScenes />
-      <OverdriveGrid />
+      <ImpossibleHero />
+      <ImpossibleChapters />
+      <ResponseGrid />
 
       <section className="section-shell" id="config">
         <div className="section-intro">
           <span className="eyebrow">world configuration</span>
-          <h2>Change the film mood live.</h2>
+          <h2>Shift the entire machine mood live.</h2>
           <p>
-            Shift the whole trailer language between cold reactor, sharp product tension, and warmer reveal energy.
+            The same structure can feel colder, sharper, or hotter without breaking the world it lives in.
           </p>
         </div>
         <ModeSwitch active={mode} setActive={setMode} />
@@ -92,10 +90,9 @@ export default function Page() {
         >
           <div className="launch-copy">
             <span className="eyebrow">launch sequence</span>
-            <h2>Now it behaves more like a trailer projected through a machine.</h2>
+            <h2>This is the strongest one-concept version yet.</h2>
             <p>
-              The next jump after this is feeding in real Kryvexis imagery, renders, or screenshots so the fake video system
-              starts telling a true brand story instead of a pure atmospheric one.
+              The next leap after this is no longer more abstraction. It is plugging real Kryvexis media, UI, renders, and product story into this world.
             </p>
           </div>
           <div className="launch-actions">
@@ -103,7 +100,7 @@ export default function Page() {
               Open repo <ArrowUpRight size={16} />
             </MagneticButton>
             <MagneticButton href="#top" secondary>
-              Reboot film engine <Sparkles size={16} />
+              Reboot the world <Sparkles size={16} />
             </MagneticButton>
           </div>
         </motion.div>

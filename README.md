@@ -1,13 +1,13 @@
-# Kryvexis System Portal V9
+# Kryvexis Impossible Experience V10
 
-V9 focuses on fake video scene energy:
-- cinematic boot sequence
-- fake camera wipes
-- poster-frame compositions
-- sticky fullscreen scene cuts
-- stronger screen-noise / projection feel
-- touch-reactive controls
-- Kryvexis logo projected like a system film element
+V10 is the one-concept version:
+- one unified motion language
+- longer cinematic boot
+- takeover story chapters
+- branded machine-core hero
+- touch-reactive interaction
+- fake-film transitions
+- deployable Next.js structure
 
 ## Run locally
 ```cmd
@@ -21,7 +21,7 @@ npm run dev
 cd /d C:\dev\NEW_WEBSITE
 git init
 git add .
-git commit -m "Build Kryvexis System Portal V9"
+git commit -m "Build Kryvexis Impossible Experience V10"
 git branch -M main
 git remote add origin https://github.com/Kryvexis/Website.git
 git push -u origin main

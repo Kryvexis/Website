@@ -56,7 +56,7 @@ button { font: inherit; cursor: pointer; }
     linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
   background-size: 72px 72px;
-  mask-image: radial-gradient(circle at center, black 20%, transparent 84%);
+  mask-image: radial-gradient(circle at center, black 18%, transparent 84%);
   opacity: .22;
 }
 .band-a {
@@ -85,9 +85,7 @@ button { font: inherit; cursor: pointer; }
   );
   opacity: .13;
 }
-.vignette-mask {
-  box-shadow: inset 0 0 180px rgba(0,0,0,.5);
-}
+.vignette-mask { box-shadow: inset 0 0 180px rgba(0,0,0,.5); }
 
 .portal-nav {
   position: sticky; top: 0; z-index: 50;
@@ -147,19 +145,19 @@ button { font: inherit; cursor: pointer; }
   background: rgba(255,255,255,.03);
 }
 .hero-metrics strong { display: block; font-size: 1.58rem; margin-bottom: 8px; }
-.hero-metrics span, .section-intro p, .variant-panel p, .stat-card p, .launch-copy p, .cinema-copy p, .overdrive-card p { color: var(--muted); }
+.hero-metrics span, .section-intro p, .variant-panel p, .stat-card p, .launch-copy p, .chapters-copy p, .response-card p { color: var(--muted); }
 
 .hero-stage { display: grid; place-items: center; min-height: 800px; }
-.projector-reactor {
+.reactor-shell {
   position: relative;
-  width: min(72vw, 920px);
-  min-height: 640px;
+  width: min(72vw, 940px);
+  min-height: 660px;
   display: grid;
   place-items: center;
 }
-.logo-shell {
+.hero-core {
   position: relative;
-  width: min(100%, 820px);
+  width: min(100%, 840px);
   padding: 56px 34px;
   border-radius: 40px;
   border: 1px solid rgba(255,255,255,.12);
@@ -169,12 +167,12 @@ button { font: inherit; cursor: pointer; }
   overflow: hidden;
   box-shadow: 0 0 110px rgba(99,212,255,.16);
 }
-.logo-shell-glow {
+.hero-core-glow {
   position: absolute; inset: 10%;
   background: radial-gradient(circle, rgba(56,189,248,.24), rgba(168,85,247,.14), rgba(255,255,255,0));
   filter: blur(34px);
 }
-.logo-screen-noise {
+.hero-core-noise {
   position: absolute; inset: 0;
   background:
     repeating-linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.03) 1px, transparent 1px, transparent 8px),
@@ -194,34 +192,21 @@ button { font: inherit; cursor: pointer; }
 .frame-a { inset: 5% 11%; transform: rotate(-8deg); opacity: .34; }
 .frame-b { inset: 14% 17%; transform: rotate(5deg); opacity: .58; }
 .frame-c { inset: 22% 24%; opacity: .9; }
-.hero-reel {
+.hero-ring {
   position: absolute;
-  width: 140px; height: 140px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.08);
-  box-shadow: inset 0 0 30px rgba(99,212,255,.06);
+  border: 1px dashed rgba(99,212,255,.16);
 }
-.reel-a { top: 6%; left: 8%; }
-.reel-b { bottom: 8%; right: 8%; }
-.hero-reel::before, .hero-reel::after {
-  content: "";
-  position: absolute;
-  inset: 22%;
-  border-radius: 999px;
-  border: 1px dashed rgba(99,212,255,.18);
-}
+.ring-a { inset: 6% 9%; }
+.ring-b { inset: 16% 18%; animation: spinReverse 18s linear infinite; }
 .hero-wipe {
   position: absolute;
   top: 0; bottom: 0;
   width: 18%;
   filter: blur(12px);
 }
-.wipe-a {
-  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(56,189,248,.24), rgba(255,255,255,0));
-}
-.wipe-b {
-  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(168,85,247,.18), rgba(255,255,255,0));
-}
+.wipe-a { background: linear-gradient(90deg, rgba(255,255,255,0), rgba(56,189,248,.24), rgba(255,255,255,0)); }
+.wipe-b { background: linear-gradient(90deg, rgba(255,255,255,0), rgba(168,85,247,.18), rgba(255,255,255,0)); }
 .hero-chip {
   position: absolute;
   padding: 10px 14px;
@@ -238,23 +223,23 @@ button { font: inherit; cursor: pointer; }
 .chip-c { bottom: 10%; left: 8%; }
 .chip-d { bottom: 8%; right: 8%; }
 
-.cinema-shell { position: relative; }
-.cinema-block { min-height: 190vh; position: relative; }
-.cinema-sticky {
+.chapters-shell { position: relative; }
+.chapters-block { min-height: 190vh; position: relative; }
+.chapters-sticky {
   position: sticky; top: 88px;
   min-height: calc(100vh - 88px);
   display: grid; grid-template-columns: .9fr 1.1fr; gap: 30px; align-items: center;
   padding: 44px 32px;
 }
-.cinema-copy h2 {
+.chapters-copy h2 {
   margin: 0 0 16px;
   font-size: clamp(2.45rem, 4.4vw, 5rem);
   line-height: 1.02;
   letter-spacing: -.045em;
 }
-.cinema-copy p { max-width: 540px; line-height: 1.76; }
+.chapters-copy p { max-width: 540px; line-height: 1.76; }
 
-.cinema-visual {
+.chapter-visual {
   position: relative;
   min-height: 72vh;
   border-radius: 40px;
@@ -265,7 +250,7 @@ button { font: inherit; cursor: pointer; }
     linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
   box-shadow: 0 30px 110px rgba(0,0,0,.42);
 }
-.cinema-layer {
+.chapter-layer {
   position: absolute;
   border-radius: 999px;
   filter: blur(22px);
@@ -282,14 +267,14 @@ button { font: inherit; cursor: pointer; }
   width: 340px; height: 340px; left: 28%; bottom: 4%;
   background: radial-gradient(circle, rgba(245,158,11,.24), rgba(245,158,11,.03));
 }
-.cinema-screen {
+.chapter-screen {
   position: absolute; inset: 10%;
   border-radius: 30px;
   border: 1px solid rgba(255,255,255,.11);
   background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
   overflow: hidden;
 }
-.cinema-grid {
+.chapter-grid {
   position: absolute; inset: 0;
   background-image:
     linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
@@ -297,21 +282,21 @@ button { font: inherit; cursor: pointer; }
   background-size: 22px 22px;
   opacity: .42;
 }
-.cinema-flicker {
+.chapter-noise {
   position: absolute; inset: 0;
   background:
     repeating-linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.03) 1px, transparent 1px, transparent 9px),
     linear-gradient(120deg, rgba(255,255,255,.04), rgba(255,255,255,0));
   opacity: .22;
 }
-.cinema-camera-wipe {
+.chapter-camera-wipe {
   position: absolute;
   top: 0; bottom: 0;
   width: 18%;
   background: linear-gradient(90deg, rgba(255,255,255,0), rgba(56,189,248,.24), rgba(255,255,255,0));
   filter: blur(12px);
 }
-.cinema-poster {
+.chapter-poster {
   position: absolute;
   border-radius: 24px;
   border: 1px solid rgba(255,255,255,.12);
@@ -333,12 +318,12 @@ button { font: inherit; cursor: pointer; }
   line-height: 1.02; letter-spacing: -.045em;
 }
 
-.overdrive-grid {
+.response-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0,1fr));
   gap: 22px;
 }
-.overdrive-card {
+.response-card {
   position: relative;
   min-height: 320px;
   padding: 2px;
@@ -347,7 +332,7 @@ button { font: inherit; cursor: pointer; }
   background: linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.03));
   overflow: hidden;
 }
-.overdrive-glow {
+.response-glow {
   position: absolute;
   width: 200px; height: 200px;
   border-radius: 999px;
@@ -358,7 +343,7 @@ button { font: inherit; cursor: pointer; }
 .glow-2 { right: -6%; top: 16%; background: rgba(168,85,247,.28); }
 .glow-3 { left: 22%; bottom: -10%; background: rgba(245,158,11,.22); }
 .glow-4 { right: 18%; bottom: -8%; background: rgba(255,255,255,.14); }
-.overdrive-inner {
+.response-inner {
   position: relative; z-index: 1;
   height: 100%;
   padding: 30px;
@@ -366,8 +351,8 @@ button { font: inherit; cursor: pointer; }
   border: 1px solid rgba(255,255,255,.08);
   background: linear-gradient(180deg, rgba(11,18,35,.92), rgba(6,10,18,.98));
 }
-.overdrive-card h3 { margin: 0 0 12px; font-size: 1.72rem; }
-.overdrive-card p { line-height: 1.72; }
+.response-card h3 { margin: 0 0 12px; font-size: 1.72rem; }
+.response-card p { line-height: 1.72; }
 
 .variant-shell { display: grid; grid-template-columns: 1fr .9fr; gap: 20px; }
 .variant-tabs { display: flex; gap: 12px; flex-wrap: wrap; }
@@ -463,10 +448,12 @@ button { font: inherit; cursor: pointer; }
   background-size: 28px 28px, 36px 36px;
   opacity: .08;
 }
-.boot-scan-sheet {
+.boot-grid {
   position: absolute; inset: 0;
-  background: repeating-linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.03) 1px, transparent 1px, transparent 8px);
-  opacity: .18;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 56px 56px;
 }
 .boot-panel {
   position: relative;
@@ -508,7 +495,7 @@ button { font: inherit; cursor: pointer; }
 }
 .boot-logo {
   position: relative; z-index: 1;
-  width: min(100%, 480px); height: auto; object-fit: contain;
+  width: min(100%, 500px); height: auto; object-fit: contain;
   filter: drop-shadow(0 0 28px rgba(56,189,248,.32));
 }
 .boot-title {
@@ -560,24 +547,28 @@ button { font: inherit; cursor: pointer; }
   0%, 100% { transform: translateX(0) scale(1); opacity: .5; }
   50% { transform: translateX(2%) scale(1.03); opacity: .9; }
 }
+@keyframes spinReverse {
+  from { transform: rotate(0); }
+  to { transform: rotate(-360deg); }
+}
 
 @media (max-width: 1180px) {
-  .hero-section, .cinema-sticky, .variant-shell, .launch-panel { grid-template-columns: 1fr; }
-  .overdrive-grid { grid-template-columns: 1fr; }
+  .hero-section, .chapters-sticky, .variant-shell, .launch-panel { grid-template-columns: 1fr; }
+  .response-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .hero-stage { min-height: 620px; }
-  .projector-reactor { width: min(92vw, 760px); }
+  .reactor-shell { width: min(92vw, 760px); }
   .launch-actions { justify-content: flex-start; }
 }
 @media (max-width: 820px) {
   .portal-nav {
     padding: 16px 18px; flex-direction: column; align-items: flex-start; gap: 10px;
   }
-  .hero-section, .section-shell, .cinema-sticky { padding: 72px 18px 28px; }
-  .hero-copy h1, .cinema-copy h2 { font-size: clamp(2.5rem, 12vw, 4.3rem); }
+  .hero-section, .section-shell, .chapters-sticky { padding: 72px 18px 28px; }
+  .hero-copy h1, .chapters-copy h2 { font-size: clamp(2.5rem, 12vw, 4.3rem); }
   .hero-metrics, .stats-grid { grid-template-columns: 1fr; }
-  .cinema-block { min-height: 155vh; }
-  .cinema-visual { min-height: 56vh; }
+  .chapters-block { min-height: 155vh; }
+  .chapter-visual { min-height: 56vh; }
   .hero-chip { display: none; }
   .boot-footer, .boot-topline { flex-direction: column; }
 }

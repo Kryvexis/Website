@@ -21,7 +21,7 @@ export default function MagneticButton({ children, href = "#launch", secondary =
       href={href}
       className={`magnetic-button ${secondary ? "secondary" : ""}`}
       animate={{ x: offset.x, y: offset.y }}
-      transition={{ type: "spring", stiffness: 170, damping: 14 }}
+      transition={{ type: "spring", stiffness: 175, damping: 14 }}
       onMouseMove={(e) => update(e.clientX, e.clientY)}
       onTouchMove={(e) => {
         const t = e.touches?.[0];
