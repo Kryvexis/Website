@@ -1,4 +1,4 @@
-KRYVEXIS V20 MULTI-PAGE - CMD START TO FINISH
+KRYVEXIS V21 SHOWCASE POLISH - CMD START TO FINISH
 
 cd /d C:\dev
 mkdir NEW_WEBSITE
@@ -13,7 +13,7 @@ npm run dev
 GitHub push:
 git init
 git add .
-git commit -m "Build Kryvexis V20 multi-page website"
+git commit -m "Build Kryvexis V21 showcase polish website"
 git branch -M main
 git remote add origin https://github.com/Kryvexis/Website.git
 git push -u origin main
