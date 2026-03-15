@@ -1,67 +1,24 @@
-# NEW_WEBSITE - GitHub + Vercel Starter
+# Kryvexis OS Portal
 
-This is a futuristic landing page starter built from scratch with Next.js 14 and Framer Motion, based on the uploaded concept brief.
+A cinematic, motion-heavy Next.js concept site designed for GitHub + Vercel deployment.
 
-## Folder path
-C:\dev\NEW_WEBSITE
-
-## CMD prompts from start to finish
-
-### 1) Go to your dev folder
+## Local setup
 ```cmd
-cd /d C:\dev
-```
-
-### 2) Create the folder and open it
-```cmd
-mkdir NEW_WEBSITE
-cd NEW_WEBSITE
-```
-
-### 3) Extract the ZIP into this folder
-Make sure files like these exist after extraction:
-- package.json
-- app\page.js
-- app\layout.js
-- app\globals.css
-- components\ShockwaveButton.jsx
-
-### 4) Install dependencies
-```cmd
+cd /d C:\dev\NEW_WEBSITE
 npm install
-```
-
-### 5) Run the site locally
-```cmd
 npm run dev
 ```
-Then open `http://localhost:3000`
 
-### 6) Initialize Git
+## Git push
 ```cmd
+cd /d C:\dev\NEW_WEBSITE
 git init
 git add .
-git commit -m "Initial futuristic website build"
-```
-
-### 7) Connect GitHub repo
-```cmd
+git commit -m "Build Kryvexis OS Portal"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/NEW_WEBSITE.git
+git remote add origin https://github.com/Kryvexis/Website.git
 git push -u origin main
 ```
 
-### 8) Deploy to Vercel with CLI
-```cmd
-npm i -g vercel
-vercel
-vercel --prod
-```
-
-## Quick update workflow later
-```cmd
-cd /d C:\dev\NEW_WEBSITE
-git add .
-git commit -m "Update site"
-git push
-```
+## Vercel
+Use Framework Preset = Next.js and leave Output Directory blank.

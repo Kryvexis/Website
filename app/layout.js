@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Kryvexis | Beyond Normal Web',
-  description: 'A futuristic cinematic launch experience built for GitHub and Vercel deployment.'
+  title: 'Kryvexis OS Portal',
+  description: 'A cinematic interactive web experience for Kryvexis.',
 };
 
 export default function RootLayout({ children }) {
