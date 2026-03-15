@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function HeroMotion() {
@@ -55,10 +56,18 @@ export default function HeroMotion() {
         <span />
       </div>
 
+      <div className="hero-screen-shell" style={{ transform: `translate(${offset.x * 0.18}px, ${offset.y * 0.18}px)` }}>
+        <div className="hero-screen-topbar" />
+        <div className="hero-screen-grid" />
+        <div className="hero-screen-scan hero-screen-scan-a" />
+        <div className="hero-screen-scan hero-screen-scan-b" />
+        <Image src="/hero-intro.png" alt="Kryvexis OS operating intelligence intro" fill className="hero-screen-image" />
+      </div>
+
       <div className="panel-shell">
         <div className="glass-card command-card" style={{ transform: `translate(${offset.x * 0.34}px, ${offset.y * 0.34}px)` }}>
           <span>Command environment</span>
-          <strong>One governed workspace for commercial execution and visibility.</strong>
+          <strong>Operating intelligence online, with one command surface for daily execution and visibility.</strong>
         </div>
 
         <div className="glass-card stat-card stat-a" style={{ transform: `translate(${offset.x * -0.26}px, ${offset.y * 0.2}px)` }}>

@@ -1533,3 +1533,194 @@ main,
     width: 22%;
   }
 }
+
+
+.split-feature-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.extra-gap {
+  margin-top: 28px;
+}
+
+.live-screen-card {
+  position: relative;
+  padding: 2px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.03));
+  box-shadow: 0 28px 70px rgba(0,0,0,.34);
+  animation: driftcard3 9s ease-in-out infinite;
+}
+
+.live-screen-card.large {
+  animation: driftcard2 10s ease-in-out infinite;
+}
+
+.live-screen-wrap {
+  position: relative;
+  min-height: 360px;
+  border-radius: 26px 26px 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(180deg, rgba(10,15,26,.96), rgba(7,11,20,.98));
+}
+
+.live-screen-card.large .live-screen-wrap {
+  min-height: 420px;
+}
+
+.live-screen-image {
+  object-fit: cover;
+  object-position: center top;
+  animation: screenfloat 13s ease-in-out infinite;
+}
+
+.live-screen-topbar {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 34px;
+  z-index: 3;
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0));
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.live-screen-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mix-blend-mode: screen;
+  opacity: .25;
+}
+
+.live-screen-scan {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(103,183,255,.20), rgba(255,255,255,0));
+  filter: blur(10px);
+}
+
+.live-screen-scan-a {
+  animation: beamrun 6.4s linear infinite;
+}
+
+.live-screen-scan-b {
+  animation: beamrun-reverse 8.8s linear infinite;
+  opacity: .75;
+}
+
+.live-screen-copy {
+  position: relative;
+  z-index: 2;
+  padding: 22px 22px 24px;
+  background: linear-gradient(180deg, rgba(14,20,34,.94), rgba(8,12,22,.97));
+  border: 1px solid rgba(255,255,255,.10);
+  border-top: 0;
+  border-radius: 0 0 26px 26px;
+}
+
+.live-screen-copy h3 {
+  margin: 0 0 10px;
+  font-size: 1.18rem;
+  color: #fff;
+}
+
+.live-screen-copy p {
+  margin: 0;
+  line-height: 1.72;
+  color: var(--muted);
+}
+
+.hero-screen-shell {
+  position: absolute;
+  inset: 12% 14%;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 24px 60px rgba(0,0,0,.36);
+  animation: driftcard 8s ease-in-out infinite;
+}
+
+.hero-screen-image {
+  object-fit: cover;
+  object-position: center;
+  animation: herozoom 18s ease-in-out infinite;
+}
+
+.hero-screen-topbar {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 36px;
+  z-index: 3;
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0));
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.hero-screen-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 36px 36px;
+  opacity: .26;
+}
+
+.hero-screen-scan {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(103,183,255,.22), rgba(255,255,255,0));
+  filter: blur(12px);
+}
+
+.hero-screen-scan-a {
+  animation: beamrun 5s linear infinite;
+}
+
+.hero-screen-scan-b {
+  animation: beamrun-reverse 7.4s linear infinite;
+  opacity: .7;
+}
+
+@keyframes screenfloat {
+  0%, 100% { transform: scale(1.01) translateY(0px); }
+  50% { transform: scale(1.04) translateY(-10px); }
+}
+
+@keyframes herozoom {
+  0%, 100% { transform: scale(1.02); }
+  50% { transform: scale(1.08); }
+}
+
+@media (max-width: 1120px) {
+  .split-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .live-screen-wrap {
+    min-height: 260px;
+  }
+
+  .live-screen-card.large .live-screen-wrap {
+    min-height: 300px;
+  }
+
+  .hero-screen-shell {
+    inset: 18% 10%;
+  }
+}

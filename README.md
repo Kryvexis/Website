@@ -53,3 +53,9 @@ Output Directory = blank
 - overdrive motion pass
 - fixed cards with stronger depth and contrast
 - massive background motion: marquees, particles, vertical beams, extra lines, section sweeps, and drifting modules/screens
+
+
+## Updated in this package
+- real Kryvexis OS screenshots integrated into hero and key sections
+- placeholders removed from the public-facing product areas
+- heavier motion around screenshots with scans, zoom, float, and beam effects

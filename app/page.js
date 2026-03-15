@@ -2,10 +2,10 @@ import AmbientLines from "@/components/AmbientLines";
 import HeroMotion from "@/components/HeroMotion";
 import TypingHeadline from "@/components/TypingHeadline";
 import ModuleCard from "@/components/ModuleCard";
-import ScreenPlaceholder from "@/components/ScreenPlaceholder";
 import ScrollReveal from "@/components/ScrollReveal";
 import OverdriveFX from "@/components/OverdriveFX";
 import SectionPulse from "@/components/SectionPulse";
+import LiveScreen from "@/components/LiveScreen";
 import { ArrowRight, Boxes, Building2, FileSpreadsheet, ShieldCheck, Users } from "lucide-react";
 
 const proof = [
@@ -63,6 +63,7 @@ export default function HomePage() {
     <main>
       <ScrollReveal />
       <OverdriveFX />
+
       <section className="hero-section">
         <AmbientLines />
         <div className="container hero-grid">
@@ -93,13 +94,23 @@ export default function HomePage() {
       </section>
 
       <section className="section subtle-motion reveal-item" id="platform"><SectionPulse />
-        <div className="container narrow">
-          <span className="eyebrow">What Kryvexis OS does</span>
-          <h2>Run sales, stock, procurement, finance, and reporting from one connected system.</h2>
-          <p className="section-intro">
-            Kryvexis OS is a role-governed business operating system that connects sales, inventory,
-            procurement, accounting, operations, and reporting inside one command environment.
-          </p>
+        <div className="container split-feature-grid">
+          <div>
+            <span className="eyebrow">What Kryvexis OS does</span>
+            <h2>Run sales, stock, procurement, finance, and reporting from one connected system.</h2>
+            <p className="section-intro">
+              Kryvexis OS is a role-governed business operating system that connects sales, inventory,
+              procurement, accounting, operations, and reporting inside one command environment.
+            </p>
+          </div>
+
+          <LiveScreen
+            src="/dashboard.png"
+            alt="Kryvexis OS dashboard"
+            title="Dashboard / daily operating view"
+            caption="The dashboard gives management a fast operating read: activity, approvals, commercial performance, debtor and task visibility, and direct actions."
+            large
+          />
         </div>
 
         <div className="container four-grid">
@@ -128,6 +139,21 @@ export default function HomePage() {
             <ModuleCard key={item.title} title={item.title} text={item.text} />
           ))}
         </div>
+
+        <div className="container split-feature-grid extra-gap">
+          <LiveScreen
+            src="/accounting.png"
+            alt="Kryvexis OS accounting"
+            title="Accounting / finance workspace"
+            caption="Accounting operates as an active control surface with debtors, statements, expenses, creditors, supplier bills, VAT, reconciliation, and period close logic."
+          />
+          <LiveScreen
+            src="/settings.png"
+            alt="Kryvexis OS settings"
+            title="Settings / workspace administration"
+            caption="Settings centralize business defaults, support details, branch selection, automation recipients, and governed configuration."
+          />
+        </div>
       </section>
 
       <section className="section reveal-item" id="flow"><SectionPulse />
@@ -152,8 +178,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section muted subtle-motion" id="governance">
-        <div className="container split-grid">
+      <section className="section muted reveal-item" id="governance"><SectionPulse />
+        <div className="container split-feature-grid">
           <div>
             <span className="eyebrow">Roles &amp; governance</span>
             <h2>Show the right work to the right people, with branch scope and controlled settings.</h2>
@@ -161,53 +187,69 @@ export default function HomePage() {
               Kryvexis OS is designed around role-aware access, branch context, settings control, workspace administration,
               and views that support executives, managers, finance teams, operators, warehouse users, and sales teams.
             </p>
+
+            <div className="governance-card">
+              <div><ShieldCheck size={18} /><span>Role-aware access</span></div>
+              <div><Building2 size={18} /><span>Branch-aware execution</span></div>
+              <div><Users size={18} /><span>Workspace administration</span></div>
+              <div><FileSpreadsheet size={18} /><span>Support details and automation recipients</span></div>
+            </div>
           </div>
 
-          <div className="governance-card">
-            <div><ShieldCheck size={18} /><span>Role-aware access</span></div>
-            <div><Building2 size={18} /><span>Branch-aware execution</span></div>
-            <div><Users size={18} /><span>Workspace administration</span></div>
-            <div><FileSpreadsheet size={18} /><span>Support details and automation recipients</span></div>
-          </div>
+          <LiveScreen
+            src="/roles.png"
+            alt="Kryvexis OS roles"
+            title="Roles / access model"
+            caption="Roles define access intent across admin, sales, finance, warehouse, procurement, operations, managers, and executives."
+            large
+          />
         </div>
       </section>
 
       <section className="section reveal-item" id="reports"><SectionPulse />
-        <div className="container split-grid">
+        <div className="container split-feature-grid">
           <div>
             <span className="eyebrow">Reports &amp; automation</span>
             <h2>Operational visibility for managers and executives too.</h2>
             <p className="section-intro">
               Use day-close, summary emails, branch performance, seller leaderboard, and exception visibility as proof that the platform supports management oversight, not just transactional work.
             </p>
+
+            <div className="report-card">
+              <h3>Management visibility</h3>
+              <ul>
+                <li>Close status</li>
+                <li>Branch performance</li>
+                <li>Summary emails</li>
+                <li>Seller performance</li>
+                <li>Exception visibility</li>
+              </ul>
+            </div>
           </div>
 
-          <div className="report-card">
-            <h3>Management visibility</h3>
-            <ul>
-              <li>Close status</li>
-              <li>Branch performance</li>
-              <li>Summary emails</li>
-              <li>Seller performance</li>
-              <li>Exception visibility</li>
-            </ul>
-          </div>
+          <LiveScreen
+            src="/reports.png"
+            alt="Kryvexis OS reports"
+            title="Reports / branch performance / close and send"
+            caption="The reports layer combines close status, branch scope, sales visibility, allocation queues, transaction signals, and summary delivery actions."
+            large
+          />
         </div>
       </section>
 
-      <section className="section muted subtle-motion" id="screens">
+      <section className="section muted reveal-item" id="screens"><SectionPulse />
         <div className="container narrow">
           <span className="eyebrow">Selected screenshots</span>
-          <h2>Use screenshots sparingly and place each one beside clear business wording.</h2>
+          <h2>The product now appears in the site as part of the motion system, not as placeholder blocks.</h2>
           <p className="section-intro">
-            These placeholders are positioned using the recommended screenshot logic: command-entry, dashboard, reports, and roles/settings.
+            These screenshots are now integrated into the experience: command-entry, dashboard, reports, roles, accounting, and settings.
           </p>
         </div>
         <div className="container screen-grid">
-          <ScreenPlaceholder title="Command-entry / secure access" caption="Recommended hero reference because it feels branded, premium, and immediate." />
-          <ScreenPlaceholder title="Dashboard / product overview" caption="Useful for the overall product overview because it immediately communicates an operational workspace." />
-          <ScreenPlaceholder title="Reports / management visibility" caption="Ideal for close status, branch performance, summaries, and executive oversight." />
-          <ScreenPlaceholder title="Roles / settings / governance" caption="Best for proving control, structure, and role-aware design." />
+          <LiveScreen src="/hero-intro.png" alt="Kryvexis OS intro" title="Command-entry / secure access" caption="A premium sign-in and handoff moment that establishes the product identity immediately." />
+          <LiveScreen src="/dashboard.png" alt="Kryvexis OS dashboard overview" title="Dashboard / product overview" caption="The fastest way to communicate daily operating visibility and the command-center idea." />
+          <LiveScreen src="/accounting.png" alt="Kryvexis OS accounting module" title="Accounting / control surface" caption="A clean finance workspace showing that the system is operationally real, not just a concept mockup." />
+          <LiveScreen src="/settings.png" alt="Kryvexis OS settings workspace" title="Settings / governance control" caption="Configuration, support, branch defaults, and automation rules anchored in one governed admin layer." />
         </div>
       </section>
 
