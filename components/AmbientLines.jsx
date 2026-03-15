@@ -35,6 +35,8 @@ export default function AmbientLines() {
       <div className="ambient-line ambient-line-a" />
       <div className="ambient-line ambient-line-b" />
       <div className="ambient-line ambient-line-c" />
+      <div className="ambient-line ambient-line-d" />
+      <div className="ambient-line ambient-line-e" />
     </>
   );
 }

@@ -47,3 +47,9 @@ Output Directory = blank
 - super-heavy motion pass
 - much darker readable floating cards
 - hero orbits, beams, pulsing fields, drifting cards, signal columns, and scroll reveal animations
+
+
+## Updated in this package
+- overdrive motion pass
+- fixed cards with stronger depth and contrast
+- massive background motion: marquees, particles, vertical beams, extra lines, section sweeps, and drifting modules/screens

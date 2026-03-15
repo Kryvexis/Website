@@ -4,6 +4,8 @@ import TypingHeadline from "@/components/TypingHeadline";
 import ModuleCard from "@/components/ModuleCard";
 import ScreenPlaceholder from "@/components/ScreenPlaceholder";
 import ScrollReveal from "@/components/ScrollReveal";
+import OverdriveFX from "@/components/OverdriveFX";
+import SectionPulse from "@/components/SectionPulse";
 import { ArrowRight, Boxes, Building2, FileSpreadsheet, ShieldCheck, Users } from "lucide-react";
 
 const proof = [
@@ -60,6 +62,7 @@ export default function HomePage() {
   return (
     <main>
       <ScrollReveal />
+      <OverdriveFX />
       <section className="hero-section">
         <AmbientLines />
         <div className="container hero-grid">
@@ -81,7 +84,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="proof-strip reveal-item">
+      <section className="proof-strip reveal-item"><SectionPulse />
         <div className="container proof-grid">
           {proof.map((item) => (
             <div className="proof-item" key={item}>{item}</div>
@@ -89,7 +92,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section subtle-motion reveal-item" id="platform">
+      <section className="section subtle-motion reveal-item" id="platform"><SectionPulse />
         <div className="container narrow">
           <span className="eyebrow">What Kryvexis OS does</span>
           <h2>Run sales, stock, procurement, finance, and reporting from one connected system.</h2>
@@ -115,7 +118,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section muted subtle-motion reveal-item" id="modules">
+      <section className="section muted subtle-motion reveal-item" id="modules"><SectionPulse />
         <div className="container narrow">
           <span className="eyebrow">Module overview</span>
           <h2>Each module is explained by business outcome, not just by feature name.</h2>
@@ -127,7 +130,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section reveal-item" id="flow">
+      <section className="section reveal-item" id="flow"><SectionPulse />
         <div className="container flow-layout">
           <div>
             <span className="eyebrow">How it works</span>
@@ -169,7 +172,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section reveal-item" id="reports">
+      <section className="section reveal-item" id="reports"><SectionPulse />
         <div className="container split-grid">
           <div>
             <span className="eyebrow">Reports &amp; automation</span>
@@ -208,7 +211,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section final-cta reveal-item" id="contact">
+      <section className="section final-cta reveal-item" id="contact"><SectionPulse />
         <div className="container narrow center">
           <span className="eyebrow">Book a walkthrough</span>
           <h2>Ready to run your business inside one command environment?</h2>
