@@ -2,21 +2,21 @@
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Sparkles, Workflow, Clapperboard, Layers3 } from "lucide-react";
+import { ArrowUpRight, Clapperboard, Layers3, Sparkles, Workflow } from "lucide-react";
 import BootSequence from "@/components/BootSequence";
-import GlobalReactor from "@/components/GlobalReactor";
 import MagneticButton from "@/components/MagneticButton";
 import ModeSwitch from "@/components/ModeSwitch";
-import ParticleMatrix from "@/components/ParticleMatrix";
+import OverdriveGrid from "@/components/OverdriveGrid";
+import ParticleStorm from "@/components/ParticleStorm";
 import SystemHero from "@/components/SystemHero";
-import SystemStory from "@/components/SystemStory";
-import TouchModules from "@/components/TouchModules";
+import SystemReactor from "@/components/SystemReactor";
+import TakeoverScenes from "@/components/TakeoverScenes";
 
 const stats = [
-  { icon: Clapperboard, title: "Longer cinematic loading", body: "A slower, more dramatic startup makes the world feel like it is actually powering on." },
-  { icon: Layers3, title: "System not website", body: "Large frames, motion rails, overlays, beams, and branded surfaces make it feel like software." },
-  { icon: Sparkles, title: "Touch + mouse reactive", body: "Mobile users still get motion response instead of a stripped-down static experience." },
-  { icon: Workflow, title: "Still deployable", body: "Next.js structure stays clean for GitHub pushes and Vercel deployment." }
+  { icon: Clapperboard, title: "Insane boot sequence", body: "Longer startup, staged progress, logo ignition, and deeper cinematic handoff." },
+  { icon: Layers3, title: "Harder system illusion", body: "More HUD layers, more scan slices, more atmospheric overload, and stronger takeover sections." },
+  { icon: Sparkles, title: "Mobile still feels alive", body: "Touch reactions keep the system expressive on phones instead of downgrading to static." },
+  { icon: Workflow, title: "Still deploy-ready", body: "Structured cleanly for GitHub and Vercel even while pushing the visuals much harder." }
 ];
 
 export default function Page() {
@@ -26,35 +26,38 @@ export default function Page() {
   return (
     <main className={pageClass}>
       <BootSequence />
-      <GlobalReactor />
-      <ParticleMatrix />
+      <SystemReactor />
+      <ParticleStorm />
       <div className="noise-layer" />
       <div className="grid-layer" />
       <div className="horizon-band band-a" />
       <div className="horizon-band band-b" />
+      <div className="flash-wash wash-a" />
+      <div className="flash-wash wash-b" />
+      <div className="scan-sheet" />
 
       <header className="portal-nav">
         <a href="#top" className="brand-mark">
           <span className="brand-dot" />
-          Kryvexis System Portal V7
+          Kryvexis System Portal V8
         </a>
         <nav>
-          <a href="#story">Story</a>
+          <a href="#takeover">Takeover</a>
           <a href="#config">Config</a>
           <a href="#launch">Launch</a>
         </nav>
       </header>
 
       <SystemHero />
-      <SystemStory />
-      <TouchModules />
+      <TakeoverScenes />
+      <OverdriveGrid />
 
       <section className="section-shell" id="config">
         <div className="section-intro">
           <span className="eyebrow">world configuration</span>
-          <h2>Switch the whole atmosphere live.</h2>
+          <h2>Switch the machine mood live.</h2>
           <p>
-            This changes the system mood without changing the structure, so you can steer between spectacle and control.
+            Tilt the whole visual language between cold reactor, sharp product tension, and cinematic reveal heat.
           </p>
         </div>
         <ModeSwitch active={mode} setActive={setMode} />
@@ -66,7 +69,7 @@ export default function Page() {
             <motion.div
               className="stat-card"
               key={title}
-              initial={{ opacity: 0, y: 22 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.55, delay: index * 0.08 }}
@@ -88,10 +91,10 @@ export default function Page() {
         >
           <div className="launch-copy">
             <span className="eyebrow">launch sequence</span>
-            <h2>Over the top, branded, animated, and far less like a normal website.</h2>
+            <h2>Closer to a hostile futuristic machine than a normal site.</h2>
             <p>
-              This version is designed as a base for the final insane version: add your real media, screenshots,
-              product shots, or video textures and it will feel even more like a living Kryvexis system.
+              This is the strongest base yet. The next leap would be feeding in real renders, screenshots, video textures,
+              or product motion footage so the madness tells your actual Kryvexis story.
             </p>
           </div>
           <div className="launch-actions">
@@ -99,7 +102,7 @@ export default function Page() {
               Open repo <ArrowUpRight size={16} />
             </MagneticButton>
             <MagneticButton href="#top" secondary>
-              Re-run system <Sparkles size={16} />
+              Reboot machine <Sparkles size={16} />
             </MagneticButton>
           </div>
         </motion.div>

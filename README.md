@@ -1,12 +1,13 @@
-# Kryvexis System Portal V7
+# Kryvexis System Portal V8
 
-This version pushes harder into:
-- longer cinematic loading screen
-- Kryvexis logo integration
-- touch-reactive motion
-- glowing system frames
-- sticky scroll scenes
-- heavy animated background activity
+V8 pushes harder into:
+- longer and heavier boot sequence
+- stronger system / machine illusion
+- bigger HUD overlays
+- takeover scroll scenes
+- overloaded background motion
+- touch reactive panels and controls
+- Kryvexis logo integrated into the machine core
 
 ## Run locally
 ```cmd
@@ -20,7 +21,7 @@ npm run dev
 cd /d C:\dev\NEW_WEBSITE
 git init
 git add .
-git commit -m "Build Kryvexis System Portal V7"
+git commit -m "Build Kryvexis System Portal V8"
 git branch -M main
 git remote add origin https://github.com/Kryvexis/Website.git
 git push -u origin main

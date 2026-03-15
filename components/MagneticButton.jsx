@@ -12,7 +12,7 @@ export default function MagneticButton({ children, href = "#launch", secondary =
     if (!rect) return;
     const x = clientX - rect.left - rect.width / 2;
     const y = clientY - rect.top - rect.height / 2;
-    setOffset({ x: x * 0.14, y: y * 0.2 });
+    setOffset({ x: x * 0.16, y: y * 0.22 });
   };
 
   return (
@@ -29,7 +29,7 @@ export default function MagneticButton({ children, href = "#launch", secondary =
       }}
       onMouseLeave={() => setOffset({ x: 0, y: 0 })}
       onTouchEnd={() => setOffset({ x: 0, y: 0 })}
-      whileTap={{ scale: 0.98 }}
+      whileTap={{ scale: 0.97 }}
     >
       <span className="magnetic-shine" />
       <span className="magnetic-ripple" />
