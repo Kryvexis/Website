@@ -7,16 +7,16 @@ export default function HeroMotion() {
 
   useEffect(() => {
     const handleMove = (e) => {
-      const x = ((e.clientX / window.innerWidth) - 0.5) * 18;
-      const y = ((e.clientY / window.innerHeight) - 0.5) * 18;
+      const x = ((e.clientX / window.innerWidth) - 0.5) * 24;
+      const y = ((e.clientY / window.innerHeight) - 0.5) * 24;
       setOffset({ x, y });
     };
 
     const handleTouch = (e) => {
       const t = e.touches?.[0];
       if (!t) return;
-      const x = ((t.clientX / window.innerWidth) - 0.5) * 18;
-      const y = ((t.clientY / window.innerHeight) - 0.5) * 18;
+      const x = ((t.clientX / window.innerWidth) - 0.5) * 24;
+      const y = ((t.clientY / window.innerHeight) - 0.5) * 24;
       setOffset({ x, y });
     };
 
@@ -30,21 +30,38 @@ export default function HeroMotion() {
 
   return (
     <div className="motion-stage">
-      <div className="halo halo-a" style={{ transform: `translate(${offset.x * -0.8}px, ${offset.y * -0.8}px)` }} />
-      <div className="halo halo-b" style={{ transform: `translate(${offset.x * 0.6}px, ${offset.y * 0.6}px)` }} />
+      <div className="hero-pulse hero-pulse-a" style={{ transform: `translate(${offset.x * -0.8}px, ${offset.y * -0.8}px)` }} />
+      <div className="hero-pulse hero-pulse-b" style={{ transform: `translate(${offset.x * 0.6}px, ${offset.y * 0.6}px)` }} />
+      <div className="hero-pulse hero-pulse-c" style={{ transform: `translate(${offset.x * -0.4}px, ${offset.y * 0.4}px)` }} />
+
       <div className="live-orbit orbit-a" />
       <div className="live-orbit orbit-b" />
       <div className="live-orbit orbit-c" />
+      <div className="live-orbit orbit-d" />
+
       <div className="scan-beam beam-a" />
       <div className="scan-beam beam-b" />
+      <div className="scan-beam beam-c" />
+
+      <div className="signal-column signal-left">
+        <span />
+        <span />
+        <span />
+      </div>
+
+      <div className="signal-column signal-right">
+        <span />
+        <span />
+        <span />
+      </div>
 
       <div className="panel-shell">
-        <div className="glass-card command-card" style={{ transform: `translate(${offset.x * 0.32}px, ${offset.y * 0.32}px)` }}>
+        <div className="glass-card command-card" style={{ transform: `translate(${offset.x * 0.34}px, ${offset.y * 0.34}px)` }}>
           <span>Command environment</span>
           <strong>One governed workspace for commercial execution and visibility.</strong>
         </div>
 
-        <div className="glass-card stat-card stat-a" style={{ transform: `translate(${offset.x * -0.24}px, ${offset.y * 0.2}px)` }}>
+        <div className="glass-card stat-card stat-a" style={{ transform: `translate(${offset.x * -0.26}px, ${offset.y * 0.2}px)` }}>
           <span>Connected workflows</span>
           <strong>Customer activity → stock impact → finance visibility → reporting</strong>
         </div>
@@ -54,7 +71,7 @@ export default function HeroMotion() {
           <strong>Role-based access, settings control, and workspace structure.</strong>
         </div>
 
-        <div className="glass-card stat-card stat-c" style={{ transform: `translate(${offset.x * -0.16}px, ${offset.y * -0.16}px)` }}>
+        <div className="glass-card stat-card stat-c" style={{ transform: `translate(${offset.x * -0.18}px, ${offset.y * -0.18}px)` }}>
           <span>Operational visibility</span>
           <strong>Day-close status, summary signals, branch comparison, and action-ready reporting.</strong>
         </div>
@@ -67,6 +84,11 @@ export default function HeroMotion() {
         <div className="glass-card mini-card mini-b">
           <span>Status</span>
           <strong>Role policies active</strong>
+        </div>
+
+        <div className="glass-card mini-card mini-c">
+          <span>Automation</span>
+          <strong>Delivery pipelines moving</strong>
         </div>
       </div>
     </div>

@@ -41,3 +41,9 @@ Output Directory = blank
 - improved card contrast/readability
 - continuous motion in hero and cards
 - animated scan beams, orbits, sheen sweeps, and live background movement
+
+
+## Updated in this package
+- super-heavy motion pass
+- much darker readable floating cards
+- hero orbits, beams, pulsing fields, drifting cards, signal columns, and scroll reveal animations

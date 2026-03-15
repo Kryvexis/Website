@@ -3,6 +3,7 @@ import HeroMotion from "@/components/HeroMotion";
 import TypingHeadline from "@/components/TypingHeadline";
 import ModuleCard from "@/components/ModuleCard";
 import ScreenPlaceholder from "@/components/ScreenPlaceholder";
+import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowRight, Boxes, Building2, FileSpreadsheet, ShieldCheck, Users } from "lucide-react";
 
 const proof = [
@@ -58,6 +59,7 @@ const flow = [
 export default function HomePage() {
   return (
     <main>
+      <ScrollReveal />
       <section className="hero-section">
         <AmbientLines />
         <div className="container hero-grid">
@@ -79,7 +81,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="proof-strip">
+      <section className="proof-strip reveal-item">
         <div className="container proof-grid">
           {proof.map((item) => (
             <div className="proof-item" key={item}>{item}</div>
@@ -87,7 +89,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section subtle-motion" id="platform">
+      <section className="section subtle-motion reveal-item" id="platform">
         <div className="container narrow">
           <span className="eyebrow">What Kryvexis OS does</span>
           <h2>Run sales, stock, procurement, finance, and reporting from one connected system.</h2>
@@ -113,7 +115,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section muted subtle-motion" id="modules">
+      <section className="section muted subtle-motion reveal-item" id="modules">
         <div className="container narrow">
           <span className="eyebrow">Module overview</span>
           <h2>Each module is explained by business outcome, not just by feature name.</h2>
@@ -125,7 +127,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" id="flow">
+      <section className="section reveal-item" id="flow">
         <div className="container flow-layout">
           <div>
             <span className="eyebrow">How it works</span>
@@ -167,7 +169,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" id="reports">
+      <section className="section reveal-item" id="reports">
         <div className="container split-grid">
           <div>
             <span className="eyebrow">Reports &amp; automation</span>
@@ -206,7 +208,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section final-cta" id="contact">
+      <section className="section final-cta reveal-item" id="contact">
         <div className="container narrow center">
           <span className="eyebrow">Book a walkthrough</span>
           <h2>Ready to run your business inside one command environment?</h2>
