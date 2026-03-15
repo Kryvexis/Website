@@ -1,0 +1,19 @@
+CD /D C:\dev
+MKDIR NEW_WEBSITE
+CD NEW_WEBSITE
+
+:: Extract ZIP contents here first
+
+npm install
+npm run dev
+
+git init
+git add .
+git commit -m "Initial futuristic website build"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/NEW_WEBSITE.git
+git push -u origin main
+
+npm i -g vercel
+vercel
+vercel --prod
