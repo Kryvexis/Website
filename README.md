@@ -30,3 +30,7 @@ git push -u origin main
 ## Vercel
 Framework Preset = Next.js
 Output Directory = blank
+
+
+## Copy update
+This package adds wording from the uploaded concept brief to the homepage and includes a testimonials page template with clearly marked placeholder proof blocks.

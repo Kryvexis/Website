@@ -4,20 +4,20 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const modules = [
   {
-    title: "System-grade interaction",
-    text: "Desktop hover, mobile touch, and continuous background motion all obey the same visual rules."
+    title: "Build the design as a system",
+    text: "Navigation, buttons, chips, data cards, overlays, and CTAs should all speak the same visual language."
   },
   {
-    title: "Directed spectacle",
-    text: "The user does not move through sections. They move through a deliberate sequence of moods and states."
+    title: "Create a motion grammar",
+    text: "Define which elements drift, which pulse, which wipe, and which interactions are reserved for major moments only."
   },
   {
-    title: "Kryvexis-branded atmosphere",
-    text: "The logo is not decoration. It acts like a machine core that the world is built around."
+    title: "Develop flagship set-pieces",
+    text: "One great animation is not enough. The experience needs at least three memorable visual moments users can describe afterwards."
   },
   {
-    title: "Over-the-top but cohesive",
-    text: "The point is not chaos. It is controlled excess, where every layer belongs to the same machine."
+    title: "Keep the writing sparse and premium",
+    text: "Remove filler copy. The hierarchy should stay ruthless so the spectacle amplifies the message instead of burying it."
   }
 ];
 
@@ -66,10 +66,11 @@ export default function ResponseGrid() {
   return (
     <section className="section-shell">
       <div className="section-intro">
-        <span className="eyebrow">world rules</span>
-        <h2>This should feel impossible because it feels unified.</h2>
+        <span className="eyebrow">production gap list</span>
+        <h2>What still needs to be true for the experience to feel exceptional.</h2>
         <p>
-          The strongest version is not the loudest single effect. It is the moment everything feels like it belongs to the same world.
+          The strongest version needs more than effects. It needs a custom brand story, disciplined copywriting,
+          premium abstraction or real product assets, and a performance architecture that keeps everything smooth.
         </p>
       </div>
 

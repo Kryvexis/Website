@@ -5,24 +5,24 @@ import { useRef } from "react";
 
 const chapters = [
   {
-    kicker: "chapter 01",
-    title: "Arrival pressure",
-    body: "The machine should already feel alive before the user does anything. Light bands, scanlines, projection haze, and fake-camera motion establish the world immediately."
+    kicker: "section 01 - arrival",
+    title: "Massive headline. Minimal text. Maximum confidence.",
+    body: "The first screen should establish premium intent immediately with cinematic typography, ambient motion, and enough restraint to feel expensive rather than crowded."
   },
   {
-    kicker: "chapter 02",
-    title: "Poster-wall collapse",
-    body: "Large visual panels slide and overlap like impossible movie frames. Scroll becomes editing, not browsing."
+    kicker: "section 02 - system reveal",
+    title: "Introduce the core interaction language.",
+    body: "This is where tilt, glow, orbit, pulse, scanlines, and layered surfaces teach the user how the world behaves. It should feel like a next-gen operating system waking up."
   },
   {
-    kicker: "chapter 03",
-    title: "System rupture",
-    body: "The interface appears to tear into a new state with wipes, depth shifts, and compositional distortion."
+    kicker: "section 03 - signature moments",
+    title: "Show the effects people will remember and talk about.",
+    body: "Mouse-reactive shockwaves, layered cards, scene morphing, and quick luminous wipes should feel surprising but still deliberate. Motion must always serve perception, not ego."
   },
   {
-    kicker: "chapter 04",
-    title: "Lock-on chamber",
-    body: "All movement narrows toward the final conversion zone so the ending feels earned, focused, and high-stakes."
+    kicker: "section 04 - product / offer focus",
+    title: "Translate spectacle into substance.",
+    body: "A concept this ambitious still needs discipline. The strongest version explains what the product is, why it matters, and what makes it superior without losing the premium atmosphere."
   }
 ];
 
