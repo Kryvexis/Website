@@ -4,29 +4,25 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 
-const phases = [
-  "mounting impossible interface shell",
-  "projecting kryvexis identity core",
-  "arming horizon distortion matrix",
-  "binding fake-cinematic transition engine",
-  "stabilizing touch-reactive field pressure",
-  "assembling takeover chapters",
-  "activating visual overdrive lattice",
-  "routing launch chamber pathways",
-  "finalizing living world handoff",
-  "system consciousness online",
-];
-
 export default function BootSequence() {
   const [show, setShow] = useState(true);
-  const [step, setStep] = useState(0);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setStep((prev) => Math.min(prev + 1, phases.length - 1));
-    }, 640);
+    let current = 0;
 
-    const timer = setTimeout(() => setShow(false), 8200);
+    const interval = setInterval(() => {
+      current += Math.floor(Math.random() * 9) + 4;
+      if (current >= 100) {
+        current = 100;
+        setProgress(100);
+        clearInterval(interval);
+      } else {
+        setProgress(current);
+      }
+    }, 220);
+
+    const timer = setTimeout(() => setShow(false), 4200);
 
     return () => {
       clearInterval(interval);
@@ -34,86 +30,48 @@ export default function BootSequence() {
     };
   }, []);
 
-  const progress = useMemo(() => ((step + 1) / phases.length) * 100, [step]);
+  const padded = useMemo(() => String(progress).padStart(3, "0"), [progress]);
 
   return (
     <AnimatePresence>
       {show && (
         <motion.div
-          className="boot-overlay"
+          className="boot-overlay minimal-boot"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.95 } }}
+          exit={{ opacity: 0, transition: { duration: 0.8 } }}
         >
           <div className="boot-noise" />
-          <div className="boot-grid" />
           <motion.div
-            className="boot-panel"
-            initial={{ opacity: 0.82, scale: 0.96 }}
+            className="boot-minimal-shell"
+            initial={{ opacity: 0.84, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0.38, scale: 1.04 }}
+            exit={{ opacity: 0.42, scale: 1.03 }}
           >
-            <div className="boot-topline">
-              <span>KRYVEXIS // IMPOSSIBLE EXPERIENCE</span>
-              <span>STAGE // ONE UNIFIED WORLD</span>
+            <motion.div
+              className="boot-minimal-glow"
+              animate={{ scale: [1, 1.08, 1], opacity: [0.45, 0.9, 0.45] }}
+              transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <Image
+              src="/kryvexis-logo.png"
+              alt="Kryvexis logo"
+              width={520}
+              height={240}
+              className="boot-minimal-logo"
+              priority
+            />
+
+            <div className="boot-minimal-progress-row">
+              <span className="boot-minimal-number">{padded}</span>
+              <span className="boot-minimal-percent">%</span>
             </div>
 
-            <div className="boot-logo-wrap">
+            <div className="boot-minimal-bar-shell">
               <motion.div
-                className="boot-logo-glow"
-                animate={{ scale: [1, 1.14, 1], opacity: [0.42, 1, 0.42] }}
-                transition={{ duration: 2.7, repeat: Infinity, ease: "easeInOut" }}
-              />
-              <motion.div
-                className="boot-logo-slice slice-a"
-                animate={{ x: [-18, 18, -18], opacity: [0.08, 0.4, 0.08] }}
-                transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-              />
-              <motion.div
-                className="boot-logo-slice slice-b"
-                animate={{ x: [18, -18, 18], opacity: [0.08, 0.34, 0.08] }}
-                transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
-              />
-              <Image
-                src="/kryvexis-logo.png"
-                alt="Kryvexis logo"
-                width={500}
-                height={240}
-                className="boot-logo"
-                priority
-              />
-            </div>
-
-            <div className="boot-title">Impossible environment ignition</div>
-            <div className="boot-subtitle">
-              Not multiple effects. One coherent machine-world with its own rules.
-            </div>
-
-            <div className="boot-lines">
-              {phases.map((line, index) => (
-                <motion.div
-                  key={line}
-                  className={`boot-line ${index <= step ? "active" : ""}`}
-                  initial={{ opacity: 0.18, x: -10 }}
-                  animate={{ opacity: index <= step ? 1 : 0.18, x: 0 }}
-                >
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <p>{line}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="boot-progress-shell">
-              <motion.div
-                className="boot-progress"
+                className="boot-minimal-bar"
                 animate={{ scaleX: progress / 100 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.24 }}
               />
-            </div>
-
-            <div className="boot-footer">
-              <span>{Math.round(progress)}%</span>
-              <span>WORLD STATE LOCKED</span>
-              <span>TRAILER MATRIX LIVE</span>
             </div>
           </motion.div>
         </motion.div>

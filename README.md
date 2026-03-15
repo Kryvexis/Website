@@ -39,3 +39,7 @@ Output Directory = blank
 ## Updated in this package
 - removed the giant centered logo hero
 - replaced it with a reactive system chamber hero
+
+
+## Updated in this package
+- loading screen simplified to logo + loading numbers only
