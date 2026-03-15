@@ -72,3 +72,9 @@ Output Directory = blank
 - removed sticky header behavior
 - added touch/click burst interaction effects
 - pushed hero motion harder with extra beams, pulses, orbits, floating tags, and stronger transforms
+
+
+## Updated in this package
+- header now disappears after scroll
+- stronger burst interactions with dots, rays, rings, and flash
+- much harder shoot-up scroll reveals and more motion on cards, sections, and flow blocks

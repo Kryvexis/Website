@@ -2,10 +2,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function SiteHeader() {
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setHidden(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="site-header site-header-floating">
+    <header className={`site-header site-header-floating ${hidden ? "header-hidden" : ""}`}>
       <div className="container nav-row">
         <Link href="/" className="brand">
           <Image src="/kryvexis-logo.png" alt="Kryvexis" width={38} height={38} className="brand-mark" priority />
