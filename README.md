@@ -32,5 +32,5 @@ Framework Preset = Next.js
 Output Directory = blank
 
 
-## Copy update
-This package adds wording from the uploaded concept brief to the homepage and includes a testimonials page template with clearly marked placeholder proof blocks.
+## Added in this package
+- placeholder screenshot panels for future Kryvexis OS images

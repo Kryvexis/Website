@@ -2,36 +2,21 @@
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Gauge, Layers3, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowUpRight, Clapperboard, Layers3, Sparkles, Workflow } from "lucide-react";
 import BootSequence from "@/components/BootSequence";
 import ImpossibleChapters from "@/components/ImpossibleChapters";
 import ImpossibleHero from "@/components/ImpossibleHero";
+import ImagePlaceholders from "@/components/ImagePlaceholders";
 import MagneticButton from "@/components/MagneticButton";
 import ModeSwitch from "@/components/ModeSwitch";
 import ResponseGrid from "@/components/ResponseGrid";
 import WorldFX from "@/components/WorldFX";
 
-const credibility = [
-  {
-    icon: Sparkles,
-    title: "Immediate impact",
-    body: "The first screen should feel premium and memorable within two seconds.",
-  },
-  {
-    icon: Layers3,
-    title: "Coherence",
-    body: "All parts of the site should appear to belong to the same world; nothing should feel bolted on.",
-  },
-  {
-    icon: Gauge,
-    title: "Motion quality",
-    body: "Animations should feel smooth, deliberate, and hierarchy-aware - never random or overused.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Believability",
-    body: "Even if the experience is futuristic, it still needs to feel intentional, usable, and professionally engineered.",
-  },
+const stats = [
+  { icon: Clapperboard, title: "One directed experience", body: "The site behaves like a cinematic machine-world instead of a landing page with effects." },
+  { icon: Layers3, title: "Unified motion grammar", body: "Backgrounds, wipes, panels, glow fields, and interactions now all speak the same language." },
+  { icon: Sparkles, title: "Interactive on every device", body: "Touch still feels expressive, while desktop keeps full motion pressure and tilt response." },
+  { icon: Workflow, title: "Still deployable", body: "Despite the spectacle, the structure remains simple for GitHub and Vercel deployment." }
 ];
 
 export default function Page() {
@@ -57,42 +42,32 @@ export default function Page() {
           Kryvexis Impossible V10
         </a>
         <nav>
-          <a href="#chapters">Story</a>
+          <a href="#chapters">Chapters</a>
+          <a href="#previews">Previews</a>
           <a href="#config">Config</a>
-          <a href="#credibility">Credibility</a>
-          <a href="/testimonials">Testimonials</a>
+          <a href="#launch">Launch</a>
         </nav>
       </header>
 
       <ImpossibleHero />
       <ImpossibleChapters />
+      <ImagePlaceholders />
       <ResponseGrid />
 
       <section className="section-shell" id="config">
         <div className="section-intro">
-          <span className="eyebrow">configurator / variant switch</span>
-          <h2>Let users toggle themes, states, and visual pressure without breaking the world.</h2>
+          <span className="eyebrow">world configuration</span>
+          <h2>Shift the entire machine mood live.</h2>
           <p>
-            A premium experience should feel responsive. The strongest version lets people switch
-            between colder product tension, warmer reveal energy, and full launch-mode intensity.
+            The same structure can feel colder, sharper, or hotter without breaking the world it lives in.
           </p>
         </div>
         <ModeSwitch active={mode} setActive={setMode} />
       </section>
 
-      <section className="section-shell" id="credibility">
-        <div className="section-intro">
-          <span className="eyebrow">specs / credibility</span>
-          <h2>Anchor the fantasy in believable detail, performance, and proof.</h2>
-          <p>
-            To feel like something no one has ever seen, the site needs more than effects. It needs a
-            clear world, a strong product story, a disciplined motion language, and a few unforgettable moments
-            executed at a premium level.
-          </p>
-        </div>
-
+      <section className="section-shell">
         <div className="stats-grid">
-          {credibility.map(({ icon: Icon, title, body }, index) => (
+          {stats.map(({ icon: Icon, title, body }, index) => (
             <motion.div
               className="stat-card"
               key={title}
@@ -117,19 +92,18 @@ export default function Page() {
           viewport={{ once: true, amount: 0.25 }}
         >
           <div className="launch-copy">
-            <span className="eyebrow">final call to action</span>
-            <h2>Finish with a singular, high-confidence action.</h2>
+            <span className="eyebrow">launch sequence</span>
+            <h2>This is the strongest one-concept version yet.</h2>
             <p>
-              The site should not reveal everything immediately. It should feel paced - every section should earn the next one,
-              and the final action should feel inevitable rather than forced.
+              The next leap after this is no longer more abstraction. It is plugging real Kryvexis media, UI, renders, and product story into this world.
             </p>
           </div>
           <div className="launch-actions">
-            <MagneticButton href="/testimonials">
-              View testimonials
-            </MagneticButton>
-            <MagneticButton href="https://github.com/Kryvexis/Website" secondary>
+            <MagneticButton href="https://github.com/Kryvexis/Website">
               Open repo <ArrowUpRight size={16} />
+            </MagneticButton>
+            <MagneticButton href="#top" secondary>
+              Reboot the world <Sparkles size={16} />
             </MagneticButton>
           </div>
         </motion.div>
