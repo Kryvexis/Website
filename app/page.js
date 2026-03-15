@@ -18,42 +18,42 @@ const proof = [
 const modules = [
   {
     title: "Sales",
-    text: "Manage the full commercial flow from customer to quote to invoice to payment inside one connected workspace."
+    text: "Manage quotes, invoices, payments, statements, and customer activity inside one connected commercial workflow."
   },
   {
     title: "Inventory",
-    text: "Keep stock decisions accurate with live visibility, movement context, and branch-aware inventory control."
+    text: "Track stock movement, branch availability, low-stock pressure, and item visibility from one operational surface."
   },
   {
     title: "Procurement",
-    text: "Turn stock pressure into guided procurement actions with supplier visibility and reorder intelligence."
+    text: "Move from stock pressure to supplier action with purchase orders, supplier visibility, and reorder discipline."
   },
   {
     title: "Accounting",
-    text: "Give finance an operational cockpit with daily visibility, control points, and close-ready surfaces."
+    text: "Run debtors, creditors, expenses, statements, reconciliation, VAT control, and close readiness from a structured finance layer."
   },
   {
     title: "Operations",
-    text: "Keep operational follow-through visible with action-focused workspaces for tasks, approvals, and execution flow."
+    text: "Keep day-to-day execution visible with tasks, approvals, process follow-through, and operational decision points."
   },
   {
     title: "Reports",
-    text: "Move from static reports to operational visibility with close status, branch comparison, and delivery-ready summaries."
+    text: "Give managers and executives clear visibility into branch performance, close status, summaries, and exceptions."
   },
   {
     title: "Roles",
-    text: "Show the right work to the right people with role-aware access, branch context, and controlled visibility."
+    text: "Control who sees what through role-aware access, branch context, and governed permissions."
   },
   {
     title: "Settings",
-    text: "Control support details, branch defaults, automation recipients, and workspace administration from one governed layer."
+    text: "Manage support details, business defaults, automation recipients, branch setup, and workspace administration in one place."
   }
 ];
 
 const flow = [
   "Customer activity",
+  "Commercial capture",
   "Stock impact",
-  "Procurement decisions",
   "Finance visibility",
   "Reporting and action",
 ];
@@ -68,16 +68,30 @@ export default function HomePage() {
         <AmbientLines />
         <div className="container hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">Command-center platform for modern businesses</span>
+            <span className="eyebrow">Business operating system for modern teams</span>
             <TypingHeadline />
             <p className="hero-text">
-              Kryvexis OS gives your business one connected command environment with role-based control,
-              branch-aware execution, and decision-ready visibility.
+              Kryvexis OS connects sales, stock, procurement, accounting, reporting, and governance inside one command environment built for daily execution.
             </p>
 
             <div className="cta-row">
-              <a className="button primary" href="#contact">Book a demo</a>
+              <a className="button primary visible-cta" href="#contact">Book a demo</a>
               <a className="button secondary" href="#platform">Explore the platform</a>
+            </div>
+
+            <div className="metric-row">
+              <div className="metric-card">
+                <strong>One connected workflow</strong>
+                <span>From customer activity to reporting and action.</span>
+              </div>
+              <div className="metric-card">
+                <strong>Built for control</strong>
+                <span>Branch-aware, role-aware, and operationally structured.</span>
+              </div>
+              <div className="metric-card">
+                <strong>Designed for visibility</strong>
+                <span>Daily decisions supported by live management signals.</span>
+              </div>
             </div>
           </div>
 
@@ -97,10 +111,9 @@ export default function HomePage() {
         <div className="container split-feature-grid">
           <div>
             <span className="eyebrow">What Kryvexis OS does</span>
-            <h2>Run sales, stock, procurement, finance, and reporting from one connected system.</h2>
+            <h2>Run the commercial and operational core of your business from one system.</h2>
             <p className="section-intro">
-              Kryvexis OS is a role-governed business operating system that connects sales, inventory,
-              procurement, accounting, operations, and reporting inside one command environment.
+              Kryvexis OS brings sales, inventory, procurement, accounting, reporting, and governance together so teams can work from one structured source of truth.
             </p>
           </div>
 
@@ -108,23 +121,23 @@ export default function HomePage() {
             src="/dashboard.png"
             alt="Kryvexis OS dashboard"
             title="Dashboard / daily operating view"
-            caption="The dashboard gives management a fast operating read: activity, approvals, commercial performance, debtor and task visibility, and direct actions."
+            caption="A real-time dashboard for activity, approvals, commercial performance, customer follow-through, and fast operational awareness."
             large
           />
         </div>
 
         <div className="container four-grid">
           <article className="value-card">
-            <BriefBlock icon={Users} title="Sell and bill with continuity" text="Customer records, quotes, invoices, payments, and commercial workflows stay connected instead of scattered across separate tools." />
+            <BriefBlock icon={Users} title="Commercial continuity" text="Keep customer records, quotes, invoices, payments, and account activity connected instead of split across separate tools." />
           </article>
           <article className="value-card">
-            <BriefBlock icon={Boxes} title="Control stock and procurement" text="Inventory visibility, movement context, low-stock awareness, supplier workflows, and reorders help operational teams act with better timing." />
+            <BriefBlock icon={Boxes} title="Stock and procurement control" text="Use live inventory visibility, branch context, supplier workflows, and reorder structure to act with better timing." />
           </article>
           <article className="value-card">
-            <BriefBlock icon={FileSpreadsheet} title="Run finance with visibility" text="Statements, cash-up, expenses, creditors, reconciliation, VAT, and close-ready views position finance as an active control surface." />
+            <BriefBlock icon={FileSpreadsheet} title="Finance with operational context" text="Give finance teams visibility across debtors, creditors, expenses, reconciliation, VAT, statements, and close readiness." />
           </article>
           <article className="value-card">
-            <BriefBlock icon={Building2} title="Lead with reports and action signals" text="Day-close visibility, summary emails, branch comparison, and operational signals help managers and executives see what needs action." />
+            <BriefBlock icon={Building2} title="Manager and executive visibility" text="Turn reporting into action with branch performance, close status, summaries, and operational signals." />
           </article>
         </div>
       </section>
@@ -132,8 +145,12 @@ export default function HomePage() {
       <section className="section muted subtle-motion reveal-item" id="modules"><SectionPulse />
         <div className="container narrow">
           <span className="eyebrow">Module overview</span>
-          <h2>Each module is explained by business outcome, not just by feature name.</h2>
+          <h2>Each part of the platform is built to support real business work.</h2>
+          <p className="section-intro">
+            Kryvexis OS is not a collection of disconnected screens. Each module supports a clear part of the operating cycle and fits into one connected system.
+          </p>
         </div>
+
         <div className="container module-grid">
           {modules.map((item) => (
             <ModuleCard key={item.title} title={item.title} text={item.text} />
@@ -145,13 +162,13 @@ export default function HomePage() {
             src="/accounting.png"
             alt="Kryvexis OS accounting"
             title="Accounting / finance workspace"
-            caption="Accounting operates as an active control surface with debtors, statements, expenses, creditors, supplier bills, VAT, reconciliation, and period close logic."
+            caption="A structured finance layer for debtors, creditors, statements, expenses, supplier bills, reconciliation, VAT control, and period close work."
           />
           <LiveScreen
             src="/settings.png"
             alt="Kryvexis OS settings"
             title="Settings / workspace administration"
-            caption="Settings centralize business defaults, support details, branch selection, automation recipients, and governed configuration."
+            caption="Configure business defaults, support details, branch settings, and automation recipients from one governed admin surface."
           />
         </div>
       </section>
@@ -160,13 +177,13 @@ export default function HomePage() {
         <div className="container flow-layout">
           <div>
             <span className="eyebrow">How it works</span>
-            <h2>Show the business flow, not just the screen list.</h2>
+            <h2>Connected workflows from first action to final visibility.</h2>
             <p className="section-intro">
-              The system advantage is the connected journey from customer activity to stock movement to finance visibility to reporting and decisions.
+              The platform is designed so that business activity moves cleanly from execution into control, finance, reporting, and follow-through.
             </p>
           </div>
 
-          <div className="flow-card">
+          <div className="flow-card flip-flow">
             {flow.map((item, index) => (
               <div className="flow-step" key={item}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
@@ -182,17 +199,16 @@ export default function HomePage() {
         <div className="container split-feature-grid">
           <div>
             <span className="eyebrow">Roles &amp; governance</span>
-            <h2>Show the right work to the right people, with branch scope and controlled settings.</h2>
+            <h2>Give every team the right level of access, visibility, and control.</h2>
             <p className="section-intro">
-              Kryvexis OS is designed around role-aware access, branch context, settings control, workspace administration,
-              and views that support executives, managers, finance teams, operators, warehouse users, and sales teams.
+              Kryvexis OS supports structured access across admin, finance, warehouse, procurement, operations, managers, executives, and sales teams.
             </p>
 
             <div className="governance-card">
               <div><ShieldCheck size={18} /><span>Role-aware access</span></div>
               <div><Building2 size={18} /><span>Branch-aware execution</span></div>
               <div><Users size={18} /><span>Workspace administration</span></div>
-              <div><FileSpreadsheet size={18} /><span>Support details and automation recipients</span></div>
+              <div><FileSpreadsheet size={18} /><span>Support details and automation rules</span></div>
             </div>
           </div>
 
@@ -200,7 +216,7 @@ export default function HomePage() {
             src="/roles.png"
             alt="Kryvexis OS roles"
             title="Roles / access model"
-            caption="Roles define access intent across admin, sales, finance, warehouse, procurement, operations, managers, and executives."
+            caption="A clear permission structure that supports responsibility, control, and visibility across the business."
             large
           />
         </div>
@@ -210,9 +226,9 @@ export default function HomePage() {
         <div className="container split-feature-grid">
           <div>
             <span className="eyebrow">Reports &amp; automation</span>
-            <h2>Operational visibility for managers and executives too.</h2>
+            <h2>Give management live visibility, not just static reports.</h2>
             <p className="section-intro">
-              Use day-close, summary emails, branch performance, seller leaderboard, and exception visibility as proof that the platform supports management oversight, not just transactional work.
+              Kryvexis OS supports day-close status, branch performance, summary delivery, queue monitoring, and exception visibility so decisions can happen faster.
             </p>
 
             <div className="report-card">
@@ -221,7 +237,7 @@ export default function HomePage() {
                 <li>Close status</li>
                 <li>Branch performance</li>
                 <li>Summary emails</li>
-                <li>Seller performance</li>
+                <li>Queue monitoring</li>
                 <li>Exception visibility</li>
               </ul>
             </div>
@@ -231,7 +247,7 @@ export default function HomePage() {
             src="/reports.png"
             alt="Kryvexis OS reports"
             title="Reports / branch performance / close and send"
-            caption="The reports layer combines close status, branch scope, sales visibility, allocation queues, transaction signals, and summary delivery actions."
+            caption="A reporting layer designed around daily visibility, management control, and operational follow-through."
             large
           />
         </div>
@@ -239,30 +255,30 @@ export default function HomePage() {
 
       <section className="section muted reveal-item" id="screens"><SectionPulse />
         <div className="container narrow">
-          <span className="eyebrow">Selected screenshots</span>
-          <h2>The product now appears in the site as part of the motion system, not as placeholder blocks.</h2>
+          <span className="eyebrow">Product views</span>
+          <h2>Real Kryvexis OS screens integrated into the site experience.</h2>
           <p className="section-intro">
-            These screenshots are now integrated into the experience: command-entry, dashboard, reports, roles, accounting, and settings.
+            These views show the product in motion across command-entry, dashboard, finance, settings, roles, and reporting.
           </p>
         </div>
         <div className="container screen-grid">
-          <LiveScreen src="/hero-intro.png" alt="Kryvexis OS intro" title="Command-entry / secure access" caption="A premium sign-in and handoff moment that establishes the product identity immediately." />
-          <LiveScreen src="/dashboard.png" alt="Kryvexis OS dashboard overview" title="Dashboard / product overview" caption="The fastest way to communicate daily operating visibility and the command-center idea." />
-          <LiveScreen src="/accounting.png" alt="Kryvexis OS accounting module" title="Accounting / control surface" caption="A clean finance workspace showing that the system is operationally real, not just a concept mockup." />
-          <LiveScreen src="/settings.png" alt="Kryvexis OS settings workspace" title="Settings / governance control" caption="Configuration, support, branch defaults, and automation rules anchored in one governed admin layer." />
+          <LiveScreen src="/hero-intro.png" alt="Kryvexis OS intro" title="Command-entry / secure access" caption="A premium first impression that establishes the product immediately." />
+          <LiveScreen src="/dashboard.png" alt="Kryvexis OS dashboard overview" title="Dashboard / product overview" caption="A fast overview of activity, approvals, sales visibility, and daily operating focus." />
+          <LiveScreen src="/accounting.png" alt="Kryvexis OS accounting module" title="Accounting / control surface" caption="A finance workspace that feels structured, useful, and operationally grounded." />
+          <LiveScreen src="/settings.png" alt="Kryvexis OS settings workspace" title="Settings / admin control" caption="One place to manage business defaults, support, branch setup, and automation routing." />
         </div>
       </section>
 
       <section className="section final-cta reveal-item" id="contact"><SectionPulse />
         <div className="container narrow center">
           <span className="eyebrow">Book a walkthrough</span>
-          <h2>Ready to run your business inside one command environment?</h2>
+          <h2>See how Kryvexis OS can bring your business into one controlled operating environment.</h2>
           <p className="section-intro">
-            Book a live walkthrough of Kryvexis OS and see how your sales, stock, finance, and reporting can work together.
+            Book a live walkthrough to explore how your sales, stock, finance, procurement, and reporting can work together in one platform.
           </p>
 
           <div className="cta-row center-row">
-            <a className="button primary" href="mailto:kryvexissolutions@gmail.com">Book a demo</a>
+            <a className="button primary visible-cta" href="mailto:kryvexissolutions@gmail.com">Book a demo</a>
             <a className="button secondary" href="https://wa.me/27686282874">WhatsApp us</a>
           </div>
         </div>

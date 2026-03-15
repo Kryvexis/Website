@@ -1724,3 +1724,129 @@ main,
     inset: 18% 10%;
   }
 }
+
+
+.visible-cta {
+  background: linear-gradient(135deg, #ffffff, #dbe9ff) !important;
+  color: #09111d !important;
+  border: 1px solid rgba(255,255,255,.82) !important;
+  box-shadow: 0 18px 38px rgba(255,255,255,.12), 0 18px 34px rgba(0,0,0,.24) !important;
+}
+
+.visible-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 22px 42px rgba(255,255,255,.14), 0 22px 40px rgba(0,0,0,.28) !important;
+}
+
+.hero-grid,
+.split-feature-grid,
+.flow-layout {
+  perspective: 1400px;
+}
+
+.live-screen-card {
+  transform-style: preserve-3d;
+}
+
+.live-screen-card:nth-child(odd) {
+  animation: cardsway 10s ease-in-out infinite;
+}
+
+.live-screen-card:nth-child(even) {
+  animation: cardsway2 12s ease-in-out infinite;
+}
+
+.live-screen-card.large {
+  animation: heroCardFloat 9s ease-in-out infinite;
+}
+
+.flip-flow {
+  position: relative;
+  overflow: hidden;
+}
+
+.flip-flow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 24%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(103,183,255,.08), rgba(255,255,255,0));
+  filter: blur(8px);
+  animation: pageflip 7.2s ease-in-out infinite;
+}
+
+.module-grid .module-card,
+.four-grid .value-card,
+.proof-grid .proof-item,
+.metric-row .metric-card {
+  animation-timing-function: ease-in-out;
+}
+
+.module-grid .module-card:nth-child(3n+1) { animation: driftcard 8.4s ease-in-out infinite; }
+.module-grid .module-card:nth-child(3n+2) { animation: driftcard2 9.1s ease-in-out infinite; }
+.module-grid .module-card:nth-child(3n) { animation: driftcard3 10.2s ease-in-out infinite; }
+
+.four-grid .value-card:nth-child(1) { animation: driftcard4 8.2s ease-in-out infinite; }
+.four-grid .value-card:nth-child(2) { animation: driftcard2 9.8s ease-in-out infinite; }
+.four-grid .value-card:nth-child(3) { animation: driftcard3 9.3s ease-in-out infinite; }
+.four-grid .value-card:nth-child(4) { animation: driftcard 10.4s ease-in-out infinite; }
+
+.proof-grid .proof-item:nth-child(1) { animation: driftcard2 7.2s ease-in-out infinite; }
+.proof-grid .proof-item:nth-child(2) { animation: driftcard3 8.2s ease-in-out infinite; }
+.proof-grid .proof-item:nth-child(3) { animation: driftcard4 9.2s ease-in-out infinite; }
+.proof-grid .proof-item:nth-child(4) { animation: driftcard 7.8s ease-in-out infinite; }
+
+.metric-row .metric-card:nth-child(1) { animation: driftcard3 8.1s ease-in-out infinite; }
+.metric-row .metric-card:nth-child(2) { animation: driftcard2 9.4s ease-in-out infinite; }
+.metric-row .metric-card:nth-child(3) { animation: driftcard4 10.1s ease-in-out infinite; }
+
+.section-pulse {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0), rgba(103,183,255,.05), rgba(255,255,255,0));
+  opacity: .8;
+  animation: sectionsweep 7s ease-in-out infinite;
+}
+
+.reveal-item {
+  opacity: 0;
+  transform: translateY(34px) scale(.985);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@keyframes cardsway {
+  0%, 100% { transform: rotateX(0deg) rotateY(0deg) translateY(0px); }
+  25% { transform: rotateX(.9deg) rotateY(-1.2deg) translateY(-6px); }
+  50% { transform: rotateX(-.6deg) rotateY(1deg) translateY(4px); }
+  75% { transform: rotateX(.7deg) rotateY(.8deg) translateY(-4px); }
+}
+
+@keyframes cardsway2 {
+  0%, 100% { transform: rotateX(0deg) rotateY(0deg) translateY(0px); }
+  25% { transform: rotateX(-.8deg) rotateY(1.1deg) translateY(5px); }
+  50% { transform: rotateX(.7deg) rotateY(-.9deg) translateY(-6px); }
+  75% { transform: rotateX(-.5deg) rotateY(-1deg) translateY(4px); }
+}
+
+@keyframes heroCardFloat {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-8px) scale(1.01); }
+}
+
+@keyframes pageflip {
+  0%, 100% { transform: translateX(-120%) skewX(-14deg); opacity: 0; }
+  18% { opacity: .85; }
+  40% { transform: translateX(420%) skewX(-14deg); opacity: .45; }
+  41%, 100% { opacity: 0; }
+}
+
+@media (max-width: 760px) {
+  .visible-cta {
+    min-height: 48px;
+  }
+}

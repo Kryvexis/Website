@@ -59,3 +59,10 @@ Output Directory = blank
 - real Kryvexis OS screenshots integrated into hero and key sections
 - placeholders removed from the public-facing product areas
 - heavier motion around screenshots with scans, zoom, float, and beam effects
+
+
+## Updated in this package
+- full production wording rewrite for public launch
+- removed placeholder style phrasing from public-facing sections
+- stronger CTA contrast
+- heavier motion with card sway, flow sweep, and upgraded reveals

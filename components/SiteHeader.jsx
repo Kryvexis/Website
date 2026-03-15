@@ -24,7 +24,7 @@ export default function SiteHeader() {
           <Link href="/testimonials">Testimonials</Link>
         </nav>
 
-        <a href="#contact" className="demo-link">Book a demo</a>
+        <a href="#contact" className="demo-link visible-cta">Book a demo</a>
       </div>
     </header>
   );

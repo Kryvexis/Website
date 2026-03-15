@@ -12,7 +12,7 @@ export default function TypingHeadline() {
       i += 1;
       setDisplay(fullText.slice(0, i));
       if (i >= fullText.length) clearInterval(interval);
-    }, 22);
+    }, 20);
     return () => clearInterval(interval);
   }, []);
 
