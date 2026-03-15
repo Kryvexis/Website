@@ -2,167 +2,153 @@
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Cpu, Gauge, Layers3, Radar, ScanLine, Sparkles } from "lucide-react";
+import { ArrowUpRight, Cpu, Layers3, Radar, Sparkles, Workflow } from "lucide-react";
 import BootSequence from "@/components/BootSequence";
-import CursorLight from "@/components/CursorLight";
-import InteractiveCard from "@/components/InteractiveCard";
+import CursorAura from "@/components/CursorAura";
+import HologramChamber from "@/components/HologramChamber";
 import MagneticButton from "@/components/MagneticButton";
-import ModeConsole from "@/components/ModeConsole";
+import ModeSwitch from "@/components/ModeSwitch";
 import OrbitalHero from "@/components/OrbitalHero";
 import ParticleField from "@/components/ParticleField";
+import SceneCard from "@/components/SceneCard";
 import SignalMarquee from "@/components/SignalMarquee";
 
 const modules = [
   {
-    eyebrow: "signature layer 01",
-    title: "Shockwave CTA physics",
-    description: "Buttons lean toward the cursor, emit ripples, and feel charged instead of merely clickable.",
-    points: ["cursor pull", "stacked ripple rings", "conversion with presence"]
+    eyebrow: "signature interaction 01",
+    title: "Portal breach hero",
+    description: "The hero behaves like a live system event, with orbit lines, floating shards, pressure glows, and layered depth.",
+    bullets: ["orbits and shards", "central energy core", "set-piece arrival"]
   },
   {
-    eyebrow: "signature layer 02",
-    title: "Holographic system cards",
-    description: "Cards tilt in 3D, generate local glow, and feel like detached control modules hovering over the page.",
-    points: ["depth illusion", "hover voltage", "modular visual grammar"]
+    eyebrow: "signature interaction 02",
+    title: "Hologram chamber",
+    description: "A mid-page room for asymmetric diagnostics, scanning surfaces, and premium motion that breaks the normal landing-page rhythm.",
+    bullets: ["rotating diagnostics", "scan sweeps", "room-like composition"]
   },
   {
-    eyebrow: "signature layer 03",
-    title: "Ambient particle fabric",
-    description: "A living background field creates constant motion and quiet complexity without turning into a lag machine.",
-    points: ["canvas particles", "line linking", "mouse drift response"]
+    eyebrow: "signature interaction 03",
+    title: "Kinetic conversion controls",
+    description: "Buttons, cards, and launch surfaces all react physically, creating tension and reward around interaction.",
+    bullets: ["magnetic CTA", "tilting modules", "energy ripple cues"]
   }
 ];
 
 const stats = [
-  { icon: Cpu, label: "Visual engine", value: "Framer Motion + canvas ambient layer + transform-driven lighting." },
-  { icon: Layers3, label: "Depth system", value: "Foreground, orbitals, UI glass, and atmosphere all move independently." },
-  { icon: Radar, label: "Interaction map", value: "Cursor aura, magnetic controls, live tabs, reveal rooms, and reactive cards." },
-  { icon: Gauge, label: "Deployment target", value: "Next.js app optimized to run cleanly through GitHub and Vercel." },
+  { icon: Cpu, title: "Motion-minded structure", body: "The experience is layered for drama without relying on heavy 3D runtime dependencies." },
+  { icon: Layers3, title: "Depth language", body: "Foreground, midground, background, and atmospheric passes all move on separate tempos." },
+  { icon: Radar, title: "Interactive identity", body: "The site no longer uses animation as garnish. Motion becomes the product language." },
+  { icon: Workflow, title: "Deploy discipline", body: "Still structured cleanly for GitHub commits and frictionless Vercel deployment." }
 ];
 
 export default function Page() {
   const [mode, setMode] = useState("flux");
-  const themeClass = useMemo(() => `theme-${mode}`, [mode]);
+  const className = useMemo(() => `portal-root theme-${mode}`, [mode]);
 
   return (
-    <main className={`portal-root ${themeClass}`}>
+    <main className={className}>
       <BootSequence />
+      <CursorAura />
       <ParticleField />
-      <CursorLight />
       <div className="noise-layer" />
       <div className="grid-layer" />
-      <div className="scanline-layer" />
 
       <header className="portal-nav">
-        <a href="#top" className="brand-mark"><span className="brand-dot" />Kryvexis OS Portal // V3</a>
+        <a href="#top" className="brand-mark">
+          <span className="brand-dot" />
+          Kryvexis OS Portal V4
+        </a>
         <nav>
-          <a href="#systems">Systems</a>
-          <a href="#console">Console</a>
+          <a href="#modules">Modules</a>
+          <a href="#chamber">Chamber</a>
+          <a href="#config">Config</a>
           <a href="#launch">Launch</a>
         </nav>
       </header>
 
-      <section id="top">
-        <OrbitalHero />
-      </section>
-
+      <OrbitalHero />
       <SignalMarquee />
 
-      <section className="section-shell" id="systems">
+      <section className="section-shell" id="modules">
         <div className="section-intro">
-          <span className="eyebrow">system architecture</span>
-          <h2>Everything should move, but it should move like it belongs to the same machine.</h2>
+          <span className="eyebrow">motion architecture</span>
+          <h2>V4 upgrades the site from a futuristic page into a richer interactive world.</h2>
           <p>
-            V3 is designed around coherent motion language: glow, orbit, pulse, sweep, hover depth, and scan energy.
-            The site feels like a product demo room, not a layout with animations sprinkled on top.
+            The portal is designed as a sequence of scenes. Each block changes posture, pacing,
+            and light behavior so the user feels like they are entering new states, not just reading sections.
           </p>
         </div>
 
-        <div className="card-grid">
-          {modules.map((item, i) => (
+        <div className="scene-grid">
+          {modules.map((item, index) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 34 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7, delay: i * 0.1 }}
+              transition={{ duration: 0.65, delay: index * 0.12 }}
             >
-              <InteractiveCard item={item} />
+              <SceneCard {...item} index={index} />
             </motion.div>
           ))}
         </div>
       </section>
 
-      <section className="section-shell split-shell">
-        <div className="story-room">
-          <span className="eyebrow">reveal sequence</span>
-          <h2>Scroll through rooms, not sections.</h2>
+      <HologramChamber />
+
+      <section className="section-shell system-band">
+        <div className="system-copy">
+          <span className="eyebrow">scene flow engine</span>
+          <h2>The website changes mood as the user travels through it.</h2>
           <p>
-            The portal escalates from arrival to system overview to launch chamber. Each band introduces a new
-            emotional state so the page feels choreographed and expensive.
+            Entry creates awe. Midpoint creates tension. Final panels focus action. The world keeps
+            evolving so the interface feels intentional and alive instead of decorative.
           </p>
-          <div className="sequence-rail">
-            {["Arrival pulse", "System decode", "Signal tension", "Offer lock", "Launch chamber"].map((step, i) => (
-              <motion.div
-                key={step}
-                className="sequence-step"
-                initial={{ opacity: 0.5, x: -18 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.12 }}
-              >
-                <span>{String(i + 1).padStart(2, "0")}</span>
-                <strong>{step}</strong>
-              </motion.div>
-            ))}
-          </div>
         </div>
 
-        <div className="holo-stage">
-          <motion.div
-            className="holo-slab"
-            animate={{ rotateX: [0, 4, 0], rotateY: [0, -4, 0] }}
-            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-          >
-            <div className="holo-grid" />
-            <div className="holo-ring r1" />
-            <div className="holo-ring r2" />
-            <div className="holo-dot d1" />
-            <div className="holo-dot d2" />
-            <div className="holo-dot d3" />
-            <div className="holo-caption">
-              <span className="eyebrow">signal object</span>
-              <strong>Launch-ready visual centerpiece</strong>
-            </div>
-          </motion.div>
+        <div className="timeline-panel">
+          {["Arrival pulse", "Hero breach", "Signal ribbon", "Hologram chamber", "Launch conversion"].map((item, index) => (
+            <motion.div
+              key={item}
+              className="timeline-step"
+              initial={{ opacity: 0.45, x: -14 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.08 }}
+            >
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{item}</strong>
+            </motion.div>
+          ))}
         </div>
       </section>
 
-      <section className="section-shell" id="console">
+      <section className="section-shell" id="config">
         <div className="section-intro">
-          <span className="eyebrow">mood controller</span>
-          <h2>Switch the entire portal atmosphere live.</h2>
+          <span className="eyebrow">world configuration</span>
+          <h2>Change the visual atmosphere in real time.</h2>
           <p>
-            This gives the site product-like behavior. You can tune the portal for enterprise, sci-fi, or premium launch-event energy.
+            The portal can switch between aggressive event styling and cleaner product styling.
+            That makes it easier to evolve the experience without replacing the core system.
           </p>
         </div>
-        <ModeConsole active={mode} setActive={setMode} />
+        <ModeSwitch active={mode} setActive={setMode} />
       </section>
 
       <section className="section-shell">
         <div className="stats-grid">
-          {stats.map(({ icon: Icon, label, value }, i) => (
+          {stats.map(({ icon: Icon, title, body }, index) => (
             <motion.div
+              key={title}
               className="stat-card"
-              key={label}
-              initial={{ opacity: 0, y: 28 }}
+              initial={{ opacity: 0, y: 26 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7, delay: i * 0.08 }}
+              transition={{ duration: 0.6, delay: index * 0.08 }}
             >
               <div className="stat-icon"><Icon size={18} /></div>
-              <h3>{label}</h3>
-              <p>{value}</p>
+              <h3>{title}</h3>
+              <p>{body}</p>
             </motion.div>
           ))}
         </div>
@@ -171,24 +157,26 @@ export default function Page() {
       <section className="section-shell" id="launch">
         <motion.div
           className="launch-panel"
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
         >
           <div className="launch-copy">
-            <span className="eyebrow">launch chamber</span>
-            <h2>Push this into Vercel and keep evolving the spectacle.</h2>
+            <span className="eyebrow">launch sequence</span>
+            <h2>This is the strongest foundation yet for a one-of-one Kryvexis website.</h2>
             <p>
-              V3 is a stronger base for the “no-one-has-seen-this” direction. It is still structured cleanly enough for
-              deployment, editing, and future sections like testimonials, product demos, AI modules, or a quote engine.
+              Drop in your real copy, brand story, product blocks, client proof, and media.
+              Then push straight to GitHub and import to Vercel using the default Next.js flow.
             </p>
           </div>
-
           <div className="launch-actions">
-            <MagneticButton href="https://github.com/Kryvexis/Website">Open repo <ArrowUpRight size={16} /></MagneticButton>
-            <MagneticButton href="#top" secondary>Reboot portal <ScanLine size={16} /></MagneticButton>
-            <MagneticButton href="#console" secondary>Switch mode <Sparkles size={16} /></MagneticButton>
+            <MagneticButton href="https://github.com/Kryvexis/Website">
+              Open repo <ArrowUpRight size={16} />
+            </MagneticButton>
+            <MagneticButton href="#top" secondary>
+              Re-run portal <Sparkles size={16} />
+            </MagneticButton>
           </div>
         </motion.div>
       </section>

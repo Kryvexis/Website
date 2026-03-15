@@ -1,4 +1,4 @@
-KRYVEXIS OS PORTAL V3 - CMD START TO FINISH
+KRYVEXIS OS PORTAL V4 - CMD START TO FINISH
 
 cd /d C:\dev
 mkdir NEW_WEBSITE
@@ -13,7 +13,7 @@ npm run dev
 GitHub push:
 git init
 git add .
-git commit -m "Build Kryvexis OS Portal V3"
+git commit -m "Build Kryvexis OS Portal V4"
 git branch -M main
 git remote add origin https://github.com/Kryvexis/Website.git
 git push -u origin main
@@ -26,7 +26,7 @@ If Git asks for identity:
 git config --global user.name "Antonie Meyer"
 git config --global user.email "97ywngzbkp@privaterelay.appleid.com"
 
-Vercel deploy:
+Deploy:
 npm install -g vercel
 vercel
 vercel --prod

@@ -1,21 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-const steps = [
-  "mounting ambient particle fabric",
-  "linking control-surface motion graphs",
-  "arming holographic conversion panels",
-  "syncing cursor light engine",
-  "portal status // unstable in a good way",
+const lines = [
+  "KRYVEXIS // world boot",
+  "stabilizing portal pressure",
+  "mapping cursor field",
+  "arming scene engine",
+  "linking conversion modules",
+  "sequence ready"
 ];
 
 export default function BootSequence() {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    const t = setTimeout(() => setShow(false), 2600);
+    const t = setTimeout(() => setShow(false), 2500);
     return () => clearTimeout(t);
   }, []);
 
@@ -25,27 +26,27 @@ export default function BootSequence() {
         <motion.div
           className="boot-overlay"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.7 } }}
+          exit={{ opacity: 0, transition: { duration: 0.6 } }}
         >
           <motion.div
             className="boot-panel"
-            initial={{ scale: 0.96, opacity: 0.6 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 1.03, opacity: 0.35 }}
+            initial={{ opacity: 0.85, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0.4, scale: 1.04 }}
           >
-            <span className="eyebrow">kryvexis // live launch system</span>
-            <h2>Booting the impossible interface.</h2>
+            <div className="boot-kicker">KRYVEXIS V4</div>
+            <div className="boot-title">Portal breach initialized</div>
             <div className="boot-lines">
-              {steps.map((step, i) => (
+              {lines.map((line, index) => (
                 <motion.div
-                  key={step}
+                  key={line}
                   className="boot-line"
-                  initial={{ opacity: 0, x: -10 }}
+                  initial={{ opacity: 0, x: -14 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.18 }}
+                  transition={{ delay: index * 0.16 }}
                 >
-                  <span>{String(i + 1).padStart(2, "0")}</span>
-                  <p>{step}</p>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <p>{line}</p>
                 </motion.div>
               ))}
             </div>
@@ -53,7 +54,7 @@ export default function BootSequence() {
               className="boot-progress"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ duration: 1.9, ease: "easeInOut" }}
+              transition={{ duration: 1.7, ease: "easeInOut" }}
             />
           </motion.div>
         </motion.div>
