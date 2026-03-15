@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Kryvexis Impossible Experience V10",
-  description: "A unified impossible web experience for Kryvexis."
+  title: "Kryvexis OS | Unified Business Operating System",
+  description: "Branch-aware, role-governed business operating system for sales, inventory, finance, procurement, reporting, and governance."
 };
 
 export default function RootLayout({ children }) {

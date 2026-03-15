@@ -4,24 +4,24 @@ import { motion } from "framer-motion";
 
 const placeholders = [
   {
-    title: "Kryvexis OS dashboard overview",
-    tag: "placeholder image 01",
-    text: "Replace this block with your main product dashboard screenshot when ready."
+    title: "Authentication and access",
+    tag: "future screenshot 01",
+    text: "Replace this block with the secure access / system ignition screen shown in the current deployed interface."
   },
   {
-    title: "Client management / workflow view",
-    tag: "placeholder image 02",
-    text: "Use this slot for the screen that best shows the daily working interface."
+    title: "Dashboard and daily visibility",
+    tag: "future screenshot 02",
+    text: "Use this slot for the dashboard view that highlights sales overview, daily visibility, and manager-ready operating signals."
   },
   {
-    title: "Invoices / quotes / transactions view",
-    tag: "placeholder image 03",
-    text: "Drop in the money-side or operations screen here once you send the real images."
+    title: "Commercial and operational workspaces",
+    tag: "future screenshot 03",
+    text: "Drop in your strongest sales, inventory, purchasing, or accounting workspace screen to show the product breadth more clearly."
   },
   {
-    title: "Reports / analytics / summary view",
-    tag: "placeholder image 04",
-    text: "This is the best place for your most impressive stats, charts, or performance screen."
+    title: "Reports, roles, and settings",
+    tag: "future screenshot 04",
+    text: "This is the best location for reports, close-and-send views, role governance, settings, or workspace administration surfaces."
   }
 ];
 
@@ -29,11 +29,11 @@ export default function ImagePlaceholders() {
   return (
     <section className="section-shell" id="previews">
       <div className="section-intro">
-        <span className="eyebrow">future system previews</span>
-        <h2>Reserved spaces for real Kryvexis OS screenshots.</h2>
+        <span className="eyebrow">current interface placeholders</span>
+        <h2>Reserved spaces for real Kryvexis OS screens.</h2>
         <p>
-          These are intentional placeholders so the site can already feel structured and real.
-          Once you send the actual Kryvexis OS images, each panel can be swapped with no redesign needed.
+          The current system overview already references authentication, dashboard, sales, inventory, purchasing, accounting,
+          operations, reports, roles, and settings. These placeholders are positioned so the real screens can be dropped in later without redesigning the site.
         </p>
       </div>
 
@@ -53,7 +53,7 @@ export default function ImagePlaceholders() {
               <div className="preview-corners corner-tr" />
               <div className="preview-corners corner-bl" />
               <div className="preview-corners corner-br" />
-              <div className="preview-placeholder-text">IMAGE PLACEHOLDER</div>
+              <div className="preview-placeholder-text">KRYVEXIS OS SCREEN PLACEHOLDER</div>
             </div>
 
             <div className="preview-copy">

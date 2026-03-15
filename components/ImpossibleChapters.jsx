@@ -5,24 +5,24 @@ import { useRef } from "react";
 
 const chapters = [
   {
-    kicker: "chapter 01",
-    title: "Arrival pressure",
-    body: "The machine should already feel alive before the user does anything. Light bands, scanlines, projection haze, and fake-camera motion establish the world immediately."
+    kicker: "product philosophy",
+    title: "One command environment instead of disconnected business tools.",
+    body: "Kryvexis OS treats sales, stock, procurement, finance, and reports as connected layers of the same operating system. The goal is continuity across daily execution, management visibility, and company governance."
   },
   {
-    kicker: "chapter 02",
-    title: "Poster-wall collapse",
-    body: "Large visual panels slide and overlap like impossible movie frames. Scroll becomes editing, not browsing."
+    kicker: "operating model",
+    title: "Branch-aware, role-aware, and increasingly workspace-driven.",
+    body: "The platform is designed to adapt for managers, executives, finance users, sales users, warehouse teams, procurement, and operations staff without losing coherence. Company profiles, branch controls, invites, branding, imports, and role-policy visibility all support that direction."
   },
   {
-    kicker: "chapter 03",
-    title: "System rupture",
-    body: "The interface appears to tear into a new state with wipes, depth shifts, and compositional distortion."
+    kicker: "capability catalogue",
+    title: "A broad product surface with credible commercial depth.",
+    body: "The reviewed materials show meaningful coverage across authentication, dashboarding, sales, inventory, procurement, accounting, operations, reports, roles, settings, and workspace administration. The application already has the shape of a serious business platform."
   },
   {
-    kicker: "chapter 04",
-    title: "Lock-on chamber",
-    body: "All movement narrows toward the final conversion zone so the ending feels earned, focused, and high-stakes."
+    kicker: "commercial reality",
+    title: "The challenge now is trust, consistency, and finish.",
+    body: "Kryvexis OS is beyond concept stage, but full commercial rollout still depends on authentication stability, backend authorization integrity, multi-company isolation, automation robustness, and a consistently premium UI finish across every core surface."
   }
 ];
 

@@ -43,3 +43,8 @@ Output Directory = blank
 
 ## Updated in this package
 - loading screen simplified to logo + loading numbers only
+
+
+## Updated in this package
+- homepage, section, and detail copy rewritten from the Kryvexis OS system overview PDF
+- headings aligned to product positioning, maturity, capability catalogue, and rollout priorities

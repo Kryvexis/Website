@@ -13,10 +13,10 @@ import ResponseGrid from "@/components/ResponseGrid";
 import WorldFX from "@/components/WorldFX";
 
 const stats = [
-  { icon: Clapperboard, title: "One directed experience", body: "The site behaves like a cinematic machine-world instead of a landing page with effects." },
-  { icon: Layers3, title: "Unified motion grammar", body: "Backgrounds, wipes, panels, glow fields, and interactions now all speak the same language." },
-  { icon: Sparkles, title: "Interactive on every device", body: "Touch still feels expressive, while desktop keeps full motion pressure and tilt response." },
-  { icon: Workflow, title: "Still deployable", body: "Despite the spectacle, the structure remains simple for GitHub and Vercel deployment." }
+  { icon: Clapperboard, title: "Current maturity", body: "Kryvexis OS is best described as advanced foundation, late build, and pre-polish rather than early concept." },
+  { icon: Layers3, title: "Strongest remaining work", body: "The key work is no longer ideation. It is trust and finish: auth stability, backend role checks, company isolation, automation reliability, and design consistency." },
+  { icon: Sparkles, title: "Recommended priority sequence", body: "Trust layer first, then operational depth, automation reliability, design consistency, and a polished showcase build." },
+  { icon: Workflow, title: "Commercial direction", body: "A stable, visually refined showcase build with coherent sample data and role-based demonstrations will accelerate demos and partner conversations." }
 ];
 
 export default function Page() {
@@ -39,13 +39,13 @@ export default function Page() {
       <header className="portal-nav">
         <a href="#top" className="brand-mark">
           <span className="brand-dot" />
-          Kryvexis Impossible V10
+          Kryvexis OS
         </a>
         <nav>
-          <a href="#chapters">Chapters</a>
-          <a href="#previews">Previews</a>
-          <a href="#config">Config</a>
-          <a href="#launch">Launch</a>
+          <a href="#chapters">Overview</a>
+          <a href="#previews">Screens</a>
+          <a href="#config">Focus</a>
+          <a href="#launch">Roadmap</a>
         </nav>
       </header>
 
@@ -56,10 +56,10 @@ export default function Page() {
 
       <section className="section-shell" id="config">
         <div className="section-intro">
-          <span className="eyebrow">world configuration</span>
-          <h2>Shift the entire machine mood live.</h2>
+          <span className="eyebrow">presentation focus</span>
+          <h2>Choose the story you want Kryvexis OS to lead with.</h2>
           <p>
-            The same structure can feel colder, sharper, or hotter without breaking the world it lives in.
+            The same product can be presented as a commercial showcase, an operational workspace, or a trust-and-rollout platform depending on the audience.
           </p>
         </div>
         <ModeSwitch active={mode} setActive={setMode} />
@@ -92,18 +92,18 @@ export default function Page() {
           viewport={{ once: true, amount: 0.25 }}
         >
           <div className="launch-copy">
-            <span className="eyebrow">launch sequence</span>
-            <h2>This is the strongest one-concept version yet.</h2>
+            <span className="eyebrow">recommended rollout priorities</span>
+            <h2>Trust, operational depth, automation reliability, design consistency, and a showcase build.</h2>
             <p>
-              The next leap after this is no longer more abstraction. It is plugging real Kryvexis media, UI, renders, and product story into this world.
+              The product already has genuine breadth across commercial execution, stock control, procurement, finance, reporting, operational workflows, and workspace governance. The next step is to prove trust, consistency, and finish before full commercial rollout.
             </p>
           </div>
           <div className="launch-actions">
             <MagneticButton href="https://github.com/Kryvexis/Website">
-              Open repo <ArrowUpRight size={16} />
+              View project repo <ArrowUpRight size={16} />
             </MagneticButton>
             <MagneticButton href="#top" secondary>
-              Reboot the world <Sparkles size={16} />
+              Restart overview <Sparkles size={16} />
             </MagneticButton>
           </div>
         </motion.div>

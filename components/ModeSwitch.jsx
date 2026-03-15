@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const modes = {
-  flux: { title: "Flux mode", accent: "Cyan / Violet", text: "Maximum machine pressure with the strongest impossible-world energy." },
-  pulse: { title: "Pulse mode", accent: "Blue / Silver", text: "Sharper product discipline with colder, cleaner system contrast." },
-  ember: { title: "Ember mode", accent: "Amber / Rose", text: "Warmer cinematic intensity for reveal-heavy story moments." }
+  flux: { title: "Commercial showcase mode", accent: "Sales / control / visibility", text: "Use this mood for demos, partner conversations, and high-impact commercial storytelling." },
+  pulse: { title: "Operational workspace mode", accent: "Depth / discipline / execution", text: "Use this mood to emphasize live KPIs, recommended actions, recent activity, and exception handling inside each main module." },
+  ember: { title: "Trust and rollout mode", accent: "Hardening / readiness / finish", text: "Use this mood when presenting the roadmap around authentication, authorization, tenant isolation, automation resilience, and premium finish work." }
 };
 
 export default function ModeSwitch({ active, setActive }) {
@@ -21,7 +21,7 @@ export default function ModeSwitch({ active, setActive }) {
       </div>
 
       <div className="variant-panel">
-        <span className="eyebrow">active world state</span>
+        <span className="eyebrow">presentation lens</span>
         <h3>{modes[active].title}</h3>
         <strong>{modes[active].accent}</strong>
         <p>{modes[active].text}</p>
