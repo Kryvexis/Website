@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function SiteHeader() {
   return (
-    <header className="site-header">
+    <header className="site-header site-header-floating">
       <div className="container nav-row">
         <Link href="/" className="brand">
           <Image src="/kryvexis-logo.png" alt="Kryvexis" width={38} height={38} className="brand-mark" priority />

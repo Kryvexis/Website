@@ -1,6 +1,7 @@
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import TouchBurst from "@/components/TouchBurst";
 
 export const metadata = {
   title: "Kryvexis OS",
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <TouchBurst />
         <SiteHeader />
         {children}
         <SiteFooter />

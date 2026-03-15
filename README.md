@@ -66,3 +66,9 @@ Output Directory = blank
 - removed placeholder style phrasing from public-facing sections
 - stronger CTA contrast
 - heavier motion with card sway, flow sweep, and upgraded reveals
+
+
+## Updated in this package
+- removed sticky header behavior
+- added touch/click burst interaction effects
+- pushed hero motion harder with extra beams, pulses, orbits, floating tags, and stronger transforms
