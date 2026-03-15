@@ -1,13 +1,12 @@
-# Kryvexis OS Portal V6
+# Kryvexis System Portal V7
 
-A more cinematic, scroll-story website concept for GitHub + Vercel.
-
-## What V6 changes
-- sticky story scenes
-- more animated backgrounds
-- picture-forming visual compositions
-- stronger trailer-like website feel
-- still clean for deployment
+This version pushes harder into:
+- longer cinematic loading screen
+- Kryvexis logo integration
+- touch-reactive motion
+- glowing system frames
+- sticky scroll scenes
+- heavy animated background activity
 
 ## Run locally
 ```cmd
@@ -21,7 +20,7 @@ npm run dev
 cd /d C:\dev\NEW_WEBSITE
 git init
 git add .
-git commit -m "Build Kryvexis OS Portal V6"
+git commit -m "Build Kryvexis System Portal V7"
 git branch -M main
 git remote add origin https://github.com/Kryvexis/Website.git
 git push -u origin main

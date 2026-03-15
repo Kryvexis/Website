@@ -24,8 +24,8 @@ export default function MagneticButton({ children, href = "#launch", secondary =
       transition={{ type: "spring", stiffness: 170, damping: 14 }}
       onMouseMove={(e) => update(e.clientX, e.clientY)}
       onTouchMove={(e) => {
-        const touch = e.touches?.[0];
-        if (touch) update(touch.clientX, touch.clientY);
+        const t = e.touches?.[0];
+        if (t) update(t.clientX, t.clientY);
       }}
       onMouseLeave={() => setOffset({ x: 0, y: 0 })}
       onTouchEnd={() => setOffset({ x: 0, y: 0 })}

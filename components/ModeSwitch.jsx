@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const modes = {
-  flux: { title: "Flux mode", accent: "Cyan / Violet", text: "High-glow mode with strong atmospheric drama." },
-  pulse: { title: "Pulse mode", accent: "Blue / Silver", text: "Sharper product styling with more contrast discipline." },
-  ember: { title: "Ember mode", accent: "Amber / Rose", text: "Warm launch-event mode for dramatic climax moments." },
+  flux: { title: "Flux mode", accent: "Cyan / Violet", text: "Maximum glow, heavier aura, and event-level spectacle." },
+  pulse: { title: "Pulse mode", accent: "Blue / Silver", text: "Sharper product mood with tighter contrast and cleaner signal behavior." },
+  ember: { title: "Ember mode", accent: "Amber / Rose", text: "Warm reveal mode for dramatic hero and launch scenes." }
 };
 
 export default function ModeSwitch({ active, setActive }) {
@@ -19,6 +19,7 @@ export default function ModeSwitch({ active, setActive }) {
           </button>
         ))}
       </div>
+
       <div className="variant-panel">
         <span className="eyebrow">active world state</span>
         <h3>{modes[active].title}</h3>
