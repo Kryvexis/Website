@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const modes = {
-  flux: { title: "Flux mode", accent: "Cyan / Violet", text: "Maximum neon pressure and event-level visual aggression." },
-  pulse: { title: "Pulse mode", accent: "Blue / Silver", text: "Sharper product tension with more restrained system contrast." },
-  ember: { title: "Ember mode", accent: "Amber / Rose", text: "Warmer cinematic climax mode for dramatic reveal scenes." }
+  flux: { title: "Flux mode", accent: "Cyan / Violet", text: "Maximum projection pressure with the loudest fake-film atmosphere." },
+  pulse: { title: "Pulse mode", accent: "Blue / Silver", text: "Cleaner product-tension mood with colder camera language." },
+  ember: { title: "Ember mode", accent: "Amber / Rose", text: "Warmer reveal mode for a cinematic end-card feeling." }
 };
 
 export default function ModeSwitch({ active, setActive }) {

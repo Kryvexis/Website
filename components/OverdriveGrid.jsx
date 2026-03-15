@@ -4,20 +4,20 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const items = [
   {
-    title: "Touch-reactive surfaces",
-    text: "On mobile, panels still push, float, and glow under the finger so the system never feels disabled."
+    title: "Fake camera language",
+    text: "The visuals now move more like edited film moments than typical website sections."
   },
   {
-    title: "Overloaded atmosphere",
-    text: "HUD slices, particle storm, scan bands, beam sweeps, pressure glows, and takeover scenes keep the machine busy."
+    title: "Poster-frame layering",
+    text: "Large composition panels create the feeling of frozen video frames or teaser stills."
   },
   {
-    title: "Branded reactor identity",
-    text: "The Kryvexis logo now sits inside a whole visual shell, not just as a badge dropped onto a page."
+    title: "Touch and pointer pressure",
+    text: "Phones still get the same system energy because panels, buttons, and atmosphere react under the finger."
   },
   {
-    title: "Cinematic conversion",
-    text: "The final action zone lands like the end card of a launch trailer instead of a standard CTA block."
+    title: "Branded machine identity",
+    text: "The Kryvexis mark is integrated as a projected system signal, not just placed as a logo."
   }
 ];
 
@@ -54,7 +54,7 @@ function Card({ title, text, index }) {
     >
       <div className={`overdrive-glow glow-${(index % 4) + 1}`} />
       <div className="overdrive-inner">
-        <span className="eyebrow">overdrive module 0{index + 1}</span>
+        <span className="eyebrow">video module 0{index + 1}</span>
         <h3>{title}</h3>
         <p>{text}</p>
       </div>
@@ -66,10 +66,10 @@ export default function OverdriveGrid() {
   return (
     <section className="section-shell">
       <div className="section-intro">
-        <span className="eyebrow">overdrive stack</span>
-        <h2>Everything should feel too alive.</h2>
+        <span className="eyebrow">projection modules</span>
+        <h2>Built to feel watched, not browsed.</h2>
         <p>
-          This is deliberate excess: more scan passes, more atmosphere, more pressure, more moving layers, more visual force.
+          V9 leans into the illusion that the browser is projecting a trailer instead of rendering a landing page.
         </p>
       </div>
 

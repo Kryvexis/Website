@@ -1,13 +1,13 @@
-# Kryvexis System Portal V8
+# Kryvexis System Portal V9
 
-V8 pushes harder into:
-- longer and heavier boot sequence
-- stronger system / machine illusion
-- bigger HUD overlays
-- takeover scroll scenes
-- overloaded background motion
-- touch reactive panels and controls
-- Kryvexis logo integrated into the machine core
+V9 focuses on fake video scene energy:
+- cinematic boot sequence
+- fake camera wipes
+- poster-frame compositions
+- sticky fullscreen scene cuts
+- stronger screen-noise / projection feel
+- touch-reactive controls
+- Kryvexis logo projected like a system film element
 
 ## Run locally
 ```cmd
@@ -21,7 +21,7 @@ npm run dev
 cd /d C:\dev\NEW_WEBSITE
 git init
 git add .
-git commit -m "Build Kryvexis System Portal V8"
+git commit -m "Build Kryvexis System Portal V9"
 git branch -M main
 git remote add origin https://github.com/Kryvexis/Website.git
 git push -u origin main

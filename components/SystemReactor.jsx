@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 export default function SystemReactor() {
   const x = useMotionValue(50);
-  const y = useMotionValue(35);
+  const y = useMotionValue(36);
   const sx = useSpring(x, { stiffness: 120, damping: 18 });
   const sy = useSpring(y, { stiffness: 120, damping: 18 });
 
@@ -31,9 +31,9 @@ export default function SystemReactor() {
   }, [x, y]);
 
   const aura = useMotionTemplate`
-    radial-gradient(620px circle at ${sx}% ${sy}%,
+    radial-gradient(680px circle at ${sx}% ${sy}%,
       rgba(56,189,248,0.24),
-      rgba(168,85,247,0.13) 22%,
+      rgba(168,85,247,0.14) 20%,
       rgba(245,158,11,0.08) 34%,
       rgba(6,10,20,0) 60%)
   `;

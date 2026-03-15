@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Kryvexis System Portal V8",
-  description: "Insane cinematic system interface for Kryvexis."
+  title: "Kryvexis System Portal V9",
+  description: "Fake video scene version for Kryvexis."
 };
 
 export default function RootLayout({ children }) {
