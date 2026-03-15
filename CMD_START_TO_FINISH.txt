@@ -1,4 +1,4 @@
-KRYVEXIS OS CLEAN WEBSITE - CMD START TO FINISH
+KRYVEXIS V20 MULTI-PAGE - CMD START TO FINISH
 
 cd /d C:\dev
 mkdir NEW_WEBSITE
@@ -13,7 +13,7 @@ npm run dev
 GitHub push:
 git init
 git add .
-git commit -m "Build clean intelligent Kryvexis website"
+git commit -m "Build Kryvexis V20 multi-page website"
 git branch -M main
 git remote add origin https://github.com/Kryvexis/Website.git
 git push -u origin main
@@ -22,15 +22,10 @@ If remote already exists:
 git remote set-url origin https://github.com/Kryvexis/Website.git
 git push -u origin main
 
-If Git asks for identity:
-git config --global user.name "Antonie Meyer"
-git config --global user.email "97ywngzbkp@privaterelay.appleid.com"
-
 Deploy:
 npm install -g vercel
 vercel
 vercel --prod
 
-Important:
 Framework Preset = Next.js
 Output Directory = blank

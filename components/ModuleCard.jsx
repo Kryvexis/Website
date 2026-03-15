@@ -1,5 +1,3 @@
-"use client";
-
 export default function ModuleCard({ title, text }) {
   return (
     <article className="module-card">

@@ -1,33 +1,17 @@
-export const metadata = {
-  title: "Testimonials | Kryvexis OS"
-};
+import PageHero from "@/components/PageHero";
 
 const placeholders = [
-  {
-    title: "Operations team feedback",
-    text: "Placeholder for a client comment about improved workflow continuity, branch visibility, or stock discipline."
-  },
-  {
-    title: "Finance team feedback",
-    text: "Placeholder for a client comment about statements, reconciliation, close readiness, or accounting visibility."
-  },
-  {
-    title: "Management feedback",
-    text: "Placeholder for a client comment about branch oversight, reporting, decisions, or role-governed control."
-  }
+  { title: "Operations team feedback", text: "Use this for verified client feedback about workflow continuity, branch visibility, or stock discipline." },
+  { title: "Finance team feedback", text: "Use this for verified feedback about statements, reconciliation, close readiness, or accounting visibility." },
+  { title: "Management feedback", text: "Use this for verified feedback about branch oversight, reporting, decisions, or role-governed control." }
 ];
 
 export default function TestimonialsPage() {
   return (
-    <main className="simple-page">
-      <div className="container narrow">
-        <span className="eyebrow">Testimonials</span>
-        <h1>Real proof belongs here.</h1>
-        <p className="section-intro">
-          Use this page for verified client feedback only. Keep every testimonial tied to a concrete business outcome.
-        </p>
-
-        <div className="testimonial-grid">
+    <main>
+      <PageHero eyebrow="Testimonials" title="Real proof belongs here." text="Use this page for verified client feedback only. Keep every testimonial tied to a clear business outcome." />
+      <section className="section">
+        <div className="container testimonial-grid">
           {placeholders.map((item) => (
             <article className="testimonial-card" key={item.title}>
               <h3>{item.title}</h3>
@@ -35,7 +19,7 @@ export default function TestimonialsPage() {
             </article>
           ))}
         </div>
-      </div>
+      </section>
     </main>
   );
 }
