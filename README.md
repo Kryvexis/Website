@@ -35,3 +35,9 @@ Output Directory = blank
 - dark premium theme
 - typing-style hero heading
 - moving ambient background lines and glow fields
+
+
+## Updated in this package
+- improved card contrast/readability
+- continuous motion in hero and cards
+- animated scan beams, orbits, sheen sweeps, and live background movement
