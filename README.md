@@ -1,13 +1,12 @@
-# Kryvexis Impossible Experience V10
+# Kryvexis OS - Clean Intelligent V11
 
-V10 is the one-concept version:
-- one unified motion language
-- longer cinematic boot
-- takeover story chapters
-- branded machine-core hero
-- touch-reactive interaction
-- fake-film transitions
-- deployable Next.js structure
+This version resets the website around:
+- premium simplicity
+- clearer business positioning
+- outcome-led copy
+- subtle interactivity
+- mobile-friendly layout
+- legal/testimonial placeholders
 
 ## Run locally
 ```cmd
@@ -21,7 +20,7 @@ npm run dev
 cd /d C:\dev\NEW_WEBSITE
 git init
 git add .
-git commit -m "Build Kryvexis Impossible Experience V10"
+git commit -m "Build clean intelligent Kryvexis website"
 git branch -M main
 git remote add origin https://github.com/Kryvexis/Website.git
 git push -u origin main
@@ -30,21 +29,3 @@ git push -u origin main
 ## Vercel
 Framework Preset = Next.js
 Output Directory = blank
-
-
-## Added in this package
-- placeholder screenshot panels for future Kryvexis OS images
-
-
-## Updated in this package
-- removed the giant centered logo hero
-- replaced it with a reactive system chamber hero
-
-
-## Updated in this package
-- loading screen simplified to logo + loading numbers only
-
-
-## Updated in this package
-- homepage, section, and detail copy rewritten from the Kryvexis OS system overview PDF
-- headings aligned to product positioning, maturity, capability catalogue, and rollout priorities
