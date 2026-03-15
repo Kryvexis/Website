@@ -1,16 +1,13 @@
-# Kryvexis OS Portal V4
+# Kryvexis OS Portal V6
 
-A more aggressive interactive Next.js build designed for GitHub + Vercel.
+A more cinematic, scroll-story website concept for GitHub + Vercel.
 
-## Features
-- boot sequence
-- cursor-reactive aura
-- animated particle field
-- orbital hero with shards and rings
-- hologram chamber section
-- signal marquee
-- tilting scene cards
-- live mode switcher
+## What V6 changes
+- sticky story scenes
+- more animated backgrounds
+- picture-forming visual compositions
+- stronger trailer-like website feel
+- still clean for deployment
 
 ## Run locally
 ```cmd
@@ -24,11 +21,12 @@ npm run dev
 cd /d C:\dev\NEW_WEBSITE
 git init
 git add .
-git commit -m "Build Kryvexis OS Portal V4"
+git commit -m "Build Kryvexis OS Portal V6"
 git branch -M main
 git remote add origin https://github.com/Kryvexis/Website.git
 git push -u origin main
 ```
 
 ## Vercel
-Use **Framework Preset = Next.js** and leave **Output Directory** blank.
+Framework Preset = Next.js
+Output Directory = blank

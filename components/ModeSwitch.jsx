@@ -3,21 +3,9 @@
 import { motion } from "framer-motion";
 
 const modes = {
-  flux: {
-    title: "Flux mode",
-    accent: "Cyan / Violet",
-    text: "High-aura mode with deeper glows, dramatic highlights, and more event energy."
-  },
-  pulse: {
-    title: "Pulse mode",
-    accent: "Blue / Silver",
-    text: "Sharper enterprise tone with cleaner contrast and more controlled signal behavior."
-  },
-  ember: {
-    title: "Ember mode",
-    accent: "Amber / Rose",
-    text: "Launch-event mode with warmer premium accents for intense reveal scenes."
-  }
+  flux: { title: "Flux mode", accent: "Cyan / Violet", text: "High-glow mode with strong atmospheric drama." },
+  pulse: { title: "Pulse mode", accent: "Blue / Silver", text: "Sharper product styling with more contrast discipline." },
+  ember: { title: "Ember mode", accent: "Amber / Rose", text: "Warm launch-event mode for dramatic climax moments." },
 };
 
 export default function ModeSwitch({ active, setActive }) {
@@ -25,13 +13,12 @@ export default function ModeSwitch({ active, setActive }) {
     <div className="variant-shell">
       <div className="variant-tabs">
         {Object.entries(modes).map(([key, item]) => (
-          <button key={key} onClick={() => setActive(key)} className={active === key ? "active" : ""}>
+          <button key={key} className={active === key ? "active" : ""} onClick={() => setActive(key)}>
             {active === key && <motion.span layoutId="mode-pill" className="active-pill-bg" />}
             <span>{item.title}</span>
           </button>
         ))}
       </div>
-
       <div className="variant-panel">
         <span className="eyebrow">active world state</span>
         <h3>{modes[active].title}</h3>

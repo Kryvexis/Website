@@ -7,12 +7,12 @@ export default function MagneticButton({ children, href = "#launch", secondary =
   const ref = useRef(null);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 
-  const handleMove = (event) => {
+  const update = (clientX, clientY) => {
     const rect = ref.current?.getBoundingClientRect();
     if (!rect) return;
-    const x = event.clientX - rect.left - rect.width / 2;
-    const y = event.clientY - rect.top - rect.height / 2;
-    setOffset({ x: x * 0.16, y: y * 0.22 });
+    const x = clientX - rect.left - rect.width / 2;
+    const y = clientY - rect.top - rect.height / 2;
+    setOffset({ x: x * 0.14, y: y * 0.2 });
   };
 
   return (
@@ -21,9 +21,14 @@ export default function MagneticButton({ children, href = "#launch", secondary =
       href={href}
       className={`magnetic-button ${secondary ? "secondary" : ""}`}
       animate={{ x: offset.x, y: offset.y }}
-      transition={{ type: "spring", stiffness: 180, damping: 14 }}
-      onMouseMove={handleMove}
+      transition={{ type: "spring", stiffness: 170, damping: 14 }}
+      onMouseMove={(e) => update(e.clientX, e.clientY)}
+      onTouchMove={(e) => {
+        const touch = e.touches?.[0];
+        if (touch) update(touch.clientX, touch.clientY);
+      }}
       onMouseLeave={() => setOffset({ x: 0, y: 0 })}
+      onTouchEnd={() => setOffset({ x: 0, y: 0 })}
       whileTap={{ scale: 0.98 }}
     >
       <span className="magnetic-shine" />

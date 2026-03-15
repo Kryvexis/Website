@@ -1,4 +1,4 @@
-KRYVEXIS OS PORTAL V4 - CMD START TO FINISH
+KRYVEXIS OS PORTAL V6 - CMD START TO FINISH
 
 cd /d C:\dev
 mkdir NEW_WEBSITE
@@ -13,7 +13,7 @@ npm run dev
 GitHub push:
 git init
 git add .
-git commit -m "Build Kryvexis OS Portal V4"
+git commit -m "Build Kryvexis OS Portal V6"
 git branch -M main
 git remote add origin https://github.com/Kryvexis/Website.git
 git push -u origin main

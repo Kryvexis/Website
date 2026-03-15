@@ -2,13 +2,12 @@
 
 import { motion } from "framer-motion";
 
-const particles = Array.from({ length: 28 }).map((_, i) => ({
+const particles = Array.from({ length: 34 }).map((_, i) => ({
   id: i,
-  left: `${(i * 13) % 100}%`,
-  top: `${(i * 29) % 100}%`,
+  left: `${(i * 11) % 100}%`,
+  top: `${(i * 19) % 100}%`,
   size: 2 + (i % 5),
-  duration: 8 + (i % 7),
-  delay: (i % 6) * 0.35,
+  duration: 7 + (i % 7),
 }));
 
 export default function ParticleField() {
@@ -20,17 +19,12 @@ export default function ParticleField() {
           className="particle-dot"
           style={{ left: p.left, top: p.top, width: p.size, height: p.size }}
           animate={{
-            y: [0, -26 - (p.id % 18), 0],
-            x: [0, (p.id % 2 === 0 ? 10 : -10), 0],
-            opacity: [0.18, 0.9, 0.18],
-            scale: [1, 1.45, 1],
+            y: [0, -24 - (p.id % 20), 0],
+            x: [0, p.id % 2 === 0 ? 10 : -10, 0],
+            opacity: [0.14, 0.78, 0.14],
+            scale: [1, 1.35, 1]
           }}
-          transition={{
-            duration: p.duration,
-            delay: p.delay,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+          transition={{ duration: p.duration, repeat: Infinity, ease: "easeInOut" }}
         />
       ))}
     </div>

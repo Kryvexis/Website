@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Kryvexis OS Portal V4",
-  description: "A cinematic interactive portal for Kryvexis, built for GitHub and Vercel.",
+  title: "Kryvexis OS Portal V6",
+  description: "A scroll-cinematic website concept for Kryvexis."
 };
 
 export default function RootLayout({ children }) {
