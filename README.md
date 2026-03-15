@@ -29,3 +29,9 @@ git push -u origin main
 ## Vercel
 Framework Preset = Next.js
 Output Directory = blank
+
+
+## Updated in this package
+- dark premium theme
+- typing-style hero heading
+- moving ambient background lines and glow fields

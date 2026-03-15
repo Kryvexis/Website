@@ -1,4 +1,6 @@
+import AmbientLines from "@/components/AmbientLines";
 import HeroMotion from "@/components/HeroMotion";
+import TypingHeadline from "@/components/TypingHeadline";
 import ModuleCard from "@/components/ModuleCard";
 import ScreenPlaceholder from "@/components/ScreenPlaceholder";
 import { ArrowRight, Boxes, Building2, FileSpreadsheet, ShieldCheck, Users } from "lucide-react";
@@ -57,10 +59,11 @@ export default function HomePage() {
   return (
     <main>
       <section className="hero-section">
+        <AmbientLines />
         <div className="container hero-grid">
           <div className="hero-copy">
             <span className="eyebrow">Command-center platform for modern businesses</span>
-            <h1>One intelligent operating system for sales, stock, procurement, finance, and reporting.</h1>
+            <TypingHeadline />
             <p className="hero-text">
               Kryvexis OS gives your business one connected command environment with role-based control,
               branch-aware execution, and decision-ready visibility.
@@ -84,7 +87,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" id="platform">
+      <section className="section subtle-motion" id="platform">
         <div className="container narrow">
           <span className="eyebrow">What Kryvexis OS does</span>
           <h2>Run sales, stock, procurement, finance, and reporting from one connected system.</h2>
@@ -110,7 +113,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section muted" id="modules">
+      <section className="section muted subtle-motion" id="modules">
         <div className="container narrow">
           <span className="eyebrow">Module overview</span>
           <h2>Each module is explained by business outcome, not just by feature name.</h2>
@@ -144,7 +147,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section muted" id="governance">
+      <section className="section muted subtle-motion" id="governance">
         <div className="container split-grid">
           <div>
             <span className="eyebrow">Roles &amp; governance</span>
@@ -187,7 +190,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section muted" id="screens">
+      <section className="section muted subtle-motion" id="screens">
         <div className="container narrow">
           <span className="eyebrow">Selected screenshots</span>
           <h2>Use screenshots sparingly and place each one beside clear business wording.</h2>
