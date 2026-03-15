@@ -1,8 +1,8 @@
-import './globals.css';
+import "./globals.css";
 
 export const metadata = {
-  title: 'Kryvexis OS Portal',
-  description: 'A cinematic interactive web experience for Kryvexis.',
+  title: "Kryvexis OS Portal V3",
+  description: "Interactive cinematic website concept for Kryvexis."
 };
 
 export default function RootLayout({ children }) {

@@ -1,88 +1,55 @@
 "use client";
 
-import {
-  motion,
-  useMotionTemplate,
-  useMotionValue,
-  useSpring,
-} from "framer-motion";
-import { useEffect } from "react";
-import { ArrowRight, Sparkles, Zap } from "lucide-react";
+import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
+import { ArrowRight, Orbit, Sparkles, Zap } from "lucide-react";
 import MagneticButton from "./MagneticButton";
 
-const orbitPanels = [
-  { title: "Scene morphing", meta: "hero state logic", x: "-38%", y: "12%" },
-  { title: "Reactive modules", meta: "hover split layers", x: "73%", y: "18%" },
-  { title: "Signal wipes", meta: "scroll reveal system", x: "66%", y: "78%" },
-  { title: "Config engine", meta: "theme / mode switch", x: "-18%", y: "76%" },
+const panels = [
+  { title: "Cursor voltage", meta: "reactive lighting", x: "6%", y: "16%" },
+  { title: "Orbit matrix", meta: "parallax fragments", x: "74%", y: "11%" },
+  { title: "Story rooms", meta: "scroll-state transitions", x: "72%", y: "75%" },
+  { title: "Signal core", meta: "live pulse engine", x: "4%", y: "73%" },
 ];
 
 export default function OrbitalHero() {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const smoothX = useSpring(mouseX, { stiffness: 110, damping: 18 });
-  const smoothY = useSpring(mouseY, { stiffness: 110, damping: 18 });
-
-  const aura = useMotionTemplate`radial-gradient(circle at ${smoothX}% ${smoothY}%, rgba(125, 211, 252, 0.24), rgba(8, 12, 22, 0) 32%)`;
-
-  useEffect(() => {
-    mouseX.set(50);
-    mouseY.set(30);
-  }, [mouseX, mouseY]);
+  const mx = useMotionValue(50);
+  const my = useMotionValue(40);
+  const sx = useSpring(mx, { stiffness: 110, damping: 18 });
+  const sy = useSpring(my, { stiffness: 110, damping: 18 });
+  const glow = useMotionTemplate`radial-gradient(circle at ${sx}% ${sy}%, rgba(167,139,250,0.24), rgba(8,12,22,0) 36%)`;
 
   return (
     <section
       className="hero-section"
-      onMouseMove={(event) => {
-        const rect = event.currentTarget.getBoundingClientRect();
-        mouseX.set(((event.clientX - rect.left) / rect.width) * 100);
-        mouseY.set(((event.clientY - rect.top) / rect.height) * 100);
+      onMouseMove={(e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        mx.set(((e.clientX - rect.left) / rect.width) * 100);
+        my.set(((e.clientY - rect.top) / rect.height) * 100);
       }}
     >
-      <motion.div className="hero-aura" style={{ background: aura }} />
-
+      <motion.div className="hero-aura" style={{ background: glow }} />
       <div className="hero-copy">
         <div className="pill-row">
-          <span className="interface-pill">
-            <Sparkles size={14} /> impossible-grade interface
-          </span>
-          <span className="interface-pill">
-            <Zap size={14} /> built for GitHub + Vercel
-          </span>
+          <span className="interface-pill"><Sparkles size={14} /> cinematic interaction engine</span>
+          <span className="interface-pill"><Zap size={14} /> deploy-ready for GitHub + Vercel</span>
+          <span className="interface-pill"><Orbit size={14} /> multi-layer portal depth</span>
         </div>
-
         <h1>
-          Enter the <span>living OS portal</span>
-          <br />
-          where motion becomes the product.
+          Break the landing page.
+          <span> Build the portal.</span>
         </h1>
-
         <p>
-          A cinematic interface built to feel like a launch event, not a landing
-          page - layered depth, reactive energy, scene changes, and premium
-          control surfaces tuned for Kryvexis.
+          V3 pushes harder: ambient particles, cursor voltage, holographic modules, scan sweeps,
+          layered orbital motion, animated data rails, and a launch section that behaves like a reveal room.
         </p>
-
         <div className="hero-actions">
-          <MagneticButton href="#launch">Launch the portal</MagneticButton>
-          <MagneticButton href="#modules" secondary>
-            Inspect the system <ArrowRight size={16} />
-          </MagneticButton>
+          <MagneticButton href="#launch">Enter launch chamber</MagneticButton>
+          <MagneticButton href="#systems" secondary>Inspect systems <ArrowRight size={16} /></MagneticButton>
         </div>
-
         <div className="hero-metrics">
-          <div>
-            <strong>03</strong>
-            <span>signature set-pieces</span>
-          </div>
-          <div>
-            <strong>60fps</strong>
-            <span>motion-first target</span>
-          </div>
-          <div>
-            <strong>∞</strong>
-            <span>future-facing aesthetic</span>
-          </div>
+          <div><strong>5</strong><span>interactive subsystems</span></div>
+          <div><strong>V3</strong><span>motion-first portal build</span></div>
+          <div><strong>∞</strong><span>brandable future energy</span></div>
         </div>
       </div>
 
@@ -90,37 +57,37 @@ export default function OrbitalHero() {
         <motion.div
           className="core-shell"
           animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 24, ease: "linear" }}
+          transition={{ repeat: Infinity, duration: 28, ease: "linear" }}
         >
           <div className="core-ring ring-one" />
           <div className="core-ring ring-two" />
+          <div className="core-ring ring-three" />
 
           <motion.div
             className="core-sphere"
-            animate={{
-              scale: [1, 1.06, 1],
-              boxShadow: [
-                "0 0 40px rgba(56,189,248,.4)",
-                "0 0 90px rgba(167,139,250,.55)",
-                "0 0 40px rgba(56,189,248,.4)",
-              ],
-            }}
-            transition={{ repeat: Infinity, duration: 4.8, ease: "easeInOut" }}
+            animate={{ scale: [1, 1.06, 1], rotate: [0, 3, -3, 0] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
           >
             <div className="sphere-grid" />
+            <div className="sphere-heart" />
           </motion.div>
 
-          {orbitPanels.map((panel, index) => (
+          {[0,1,2,3,4,5].map((i) => (
+            <motion.span
+              key={i}
+              className={`orbit-shard shard-${i + 1}`}
+              animate={{ y: [0, i % 2 ? -16 : 16, 0], rotate: [0, 20, 0] }}
+              transition={{ repeat: Infinity, duration: 4 + i * 0.6, ease: "easeInOut" }}
+            />
+          ))}
+
+          {panels.map((panel, i) => (
             <motion.div
               key={panel.title}
               className="orbit-panel"
               style={{ left: panel.x, top: panel.y }}
-              animate={{ y: [0, index % 2 === 0 ? -14 : 14, 0] }}
-              transition={{
-                duration: 5 + index,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+              animate={{ y: [0, i % 2 ? 10 : -10, 0] }}
+              transition={{ repeat: Infinity, duration: 5 + i, ease: "easeInOut" }}
             >
               <span>{panel.meta}</span>
               <strong>{panel.title}</strong>
