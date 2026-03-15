@@ -34,3 +34,8 @@ Output Directory = blank
 
 ## Added in this package
 - placeholder screenshot panels for future Kryvexis OS images
+
+
+## Updated in this package
+- removed the giant centered logo hero
+- replaced it with a reactive system chamber hero

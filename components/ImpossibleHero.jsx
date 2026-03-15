@@ -1,9 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { MoveRight, Sparkles, Zap } from "lucide-react";
 import MagneticButton from "./MagneticButton";
+
+const sidePanels = [
+  { label: "signal pressure", pos: "panel-a" },
+  { label: "reactive surfaces", pos: "panel-b" },
+  { label: "touch field", pos: "panel-c" },
+  { label: "launch route", pos: "panel-d" },
+];
 
 export default function ImpossibleHero() {
   return (
@@ -21,7 +27,7 @@ export default function ImpossibleHero() {
         </h1>
 
         <p>
-          V10 stops stacking random effects and turns the entire browser into one directed experience:
+          V10 stops stacking random effects and turns the browser into one directed experience:
           branded signal language, takeover chapters, fake-film transitions, and interaction pressure everywhere.
         </p>
 
@@ -53,23 +59,54 @@ export default function ImpossibleHero() {
           <motion.div className="hero-wipe wipe-a" animate={{ x: ["-24%", "124%"] }} transition={{ duration: 4.6, repeat: Infinity, ease: "linear" }} />
           <motion.div className="hero-wipe wipe-b" animate={{ x: ["124%", "-24%"] }} transition={{ duration: 5.4, repeat: Infinity, ease: "linear" }} />
 
-          <div className="hero-core">
+          <div className="hero-core chamber-core">
             <div className="hero-core-glow" />
             <div className="hero-core-noise" />
-            <Image
-              src="/kryvexis-logo.png"
-              alt="Kryvexis"
-              width={780}
-              height={360}
-              className="hero-logo"
-              priority
+            <div className="reactor-grid" />
+            <motion.div
+              className="reactor-orbit orbit-1"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 16, repeat: Infinity, ease: "linear" }}
             />
-          </div>
+            <motion.div
+              className="reactor-orbit orbit-2"
+              animate={{ rotate: -360 }}
+              transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.div
+              className="reactor-orbit orbit-3"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.div
+              className="reactor-core"
+              animate={{
+                scale: [1, 1.06, 1],
+                boxShadow: [
+                  "0 0 40px rgba(56,189,248,.30)",
+                  "0 0 110px rgba(168,85,247,.42)",
+                  "0 0 40px rgba(56,189,248,.30)"
+                ]
+              }}
+              transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <div className="reactor-core-inner" />
+            </motion.div>
 
-          <div className="hero-chip chip-a">world shell</div>
-          <div className="hero-chip chip-b">signal grammar</div>
-          <div className="hero-chip chip-c">touch field</div>
-          <div className="hero-chip chip-d">launch route</div>
+            {sidePanels.map((item, index) => (
+              <motion.div
+                key={item.label}
+                className={`reactor-side-panel ${item.pos}`}
+                animate={{ y: [0, index % 2 === 0 ? -10 : 10, 0] }}
+                transition={{ duration: 4 + index, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <span>kryvexis</span>
+                <strong>{item.label}</strong>
+              </motion.div>
+            ))}
+
+            <div className="subtle-brand-stamp">KRYVEXIS // SIGNAL CORE</div>
+          </div>
         </motion.div>
       </div>
     </section>
